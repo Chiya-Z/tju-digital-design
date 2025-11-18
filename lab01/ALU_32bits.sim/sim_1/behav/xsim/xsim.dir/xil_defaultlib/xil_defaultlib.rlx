@@ -1,0 +1,13 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+D:/TJU/tju-digital-design/lab01/ALU_32bits.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+D:/TJU/tju-digital-design/lab01/ALU_32bits.srcs/sim_1/new/ALU_32bits_tb.sv,1763457065,systemVerilog,,,,ALU_32bits_tb,,,,,,,,
+D:/TJU/tju-digital-design/lab01/ALU_32bits.srcs/sources_1/new/ALU_32bits.sv,1762356750,systemVerilog,,D:/TJU/tju-digital-design/lab01/ALU_32bits.srcs/sources_1/new/alu.sv,,ALU_32bits,,,,,,,,
+D:/TJU/tju-digital-design/lab01/ALU_32bits.srcs/sources_1/new/ALU_32bits_top.v,1762356712,verilog,,,,ALU_32bits_top,,,,,,,,
+D:/TJU/tju-digital-design/lab01/ALU_32bits.srcs/sources_1/new/alu.sv,1763456396,systemVerilog,,D:/TJU/tju-digital-design/lab01/ALU_32bits.srcs/sources_1/new/fulladder.sv,,alu,,,,,,,,
+D:/TJU/tju-digital-design/lab01/ALU_32bits.srcs/sources_1/new/decoder.sv,1762356926,systemVerilog,,D:/TJU/tju-digital-design/lab01/ALU_32bits.srcs/sources_1/new/fulladder.sv,,decoder,,,,,,,,
+D:/TJU/tju-digital-design/lab01/ALU_32bits.srcs/sources_1/new/fulladder.sv,1763456018,systemVerilog,,D:/TJU/tju-digital-design/lab01/ALU_32bits.srcs/sources_1/new/rca.sv,,fulladder,,,,,,,,
+D:/TJU/tju-digital-design/lab01/ALU_32bits.srcs/sources_1/new/rca.sv,1763456018,systemVerilog,,D:/TJU/tju-digital-design/lab01/ALU_32bits.srcs/sim_1/new/ALU_32bits_tb.sv,,rca,,,,,,,,
+D:/TJU/tju-digital-design/lab01/ALU_32bits.srcs/sources_1/new/seg_made.sv,1762356897,systemVerilog,,,,seg_made,,,,,,,,

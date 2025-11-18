@@ -1,0 +1,17 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../ALU_32bits.srcs/sources_1/new/ALU_32bits.sv" \
+"../../../../ALU_32bits.srcs/sources_1/new/alu.sv" \
+"../../../../ALU_32bits.srcs/sources_1/new/decoder.sv" \
+"../../../../ALU_32bits.srcs/sources_1/new/fulladder.sv" \
+"../../../../ALU_32bits.srcs/sources_1/new/rca.sv" \
+"../../../../ALU_32bits.srcs/sources_1/new/seg_made.sv" \
+
+verilog xil_defaultlib  \
+"../../../../ALU_32bits.srcs/sources_1/new/ALU_32bits_top.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
