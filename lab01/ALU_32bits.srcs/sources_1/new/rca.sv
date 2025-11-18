@@ -22,5 +22,30 @@
 
 module rca(
 
+    input  wire [31:0] a,
+    input  wire [31:0] b,
+    input  wire        cin,
+    output wire [31:0] sum,
+    output wire        cout
     );
+
+    // carry chain: c[0] is cin, c[32] is final carry-out
+    wire [32:0] c;
+    assign c[0] = cin;
+
+    genvar i;
+    generate
+        for (i = 0; i < 32; i = i + 1) begin : FA_LOOP
+            fulladder fa(
+                .a   (a[i]),
+                .b   (b[i]),
+                .cin (c[i]),
+                .sum (sum[i]),
+                .cout(c[i+1])
+            );
+        end
+    endgenerate
+
+    assign cout = c[32];
+
 endmodule

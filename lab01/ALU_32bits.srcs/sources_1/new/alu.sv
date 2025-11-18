@@ -26,6 +26,110 @@ module alu(
 	localparam	SLT   =	4'b1110;
 	localparam	SLTU  =	4'b1111;
 	
-	// TODO: Finish the ALU_32bits design£¡£¡£¡
-	
+	// TODO: Finish the ALU_32bits designï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	// Internal wires for arithmetic using rca
+
+	wire [31:0] sum_add; // A + B
+	wire        cout_add;
+	wire [31:0] sum_add_bneg; // A + (~B) + 1  (used for subtraction)
+	wire        cout_add_bneg;
+
+	// instantiate rca for addition (A + B)
+	rca u_rca_add(
+		.a   (A),
+		.b   (B),
+		.cin (1'b0),
+		.sum (sum_add),
+		.cout(cout_add)
+	);
+
+	// instantiate rca for A + (~B) + 1 (used for subtraction)
+	rca u_rca_sub(
+		.a   (A),
+		.b   (~B),
+		.cin (1'b1),
+		.sum (sum_add_bneg),
+		.cout(cout_add_bneg)
+	);
+
+	always_comb begin
+		ZF = 1'b0;
+		OF = 1'b0;
+		alures = 32'b0;
+		case (aluop)
+			AND: begin
+				alures = A & B;
+				OF = 1'b0;
+			end
+			OR: begin
+				alures = A | B;
+				OF = 1'b0;
+			end
+			XOR: begin
+				alures = A ^ B;
+				OF = 1'b0;
+			end
+			NAND: begin
+				alures = ~(A & B);
+				OF = 1'b0;
+			end
+			NOT: begin
+				alures = ~A;
+				OF = 1'b0;
+			end
+			SLL: begin
+				alures = A << B[4:0];
+				OF = 1'b0;
+			end
+			SRL: begin
+				alures = A >> B[4:0];
+				OF = 1'b0;
+			end
+			SRA: begin
+				alures = $signed(A) >>> B[4:0];
+				OF = 1'b0;
+			end
+			MULU: begin
+				alures = ($unsigned(A) * $unsigned(B))[31:0];
+				OF = 1'b0;
+			end
+			MUL: begin
+				alures = ($signed(A) * $signed(B))[31:0];
+				OF = 1'b0;
+			end
+			ADD: begin // signed addition using rca
+				alures = sum_add;
+				// signed overflow: when A and B have same sign and result has different sign
+				OF = (A[31] & B[31] & ~sum_add[31]) | (~A[31] & ~B[31] & sum_add[31]);
+			end
+			ADDU: begin // unsigned add
+				alures = sum_add;
+				OF = 1'b0;
+			end
+			SUB: begin // signed subtraction A - B  using rca (A + ~B + 1)
+				alures = sum_add_bneg;
+				// signed overflow on subtraction: when A and B have different signs and result sign differs from A
+				OF = (A[31] & ~B[31] & ~sum_add_bneg[31]) | (~A[31] & B[31] & sum_add_bneg[31]);
+			end
+			SUBU: begin // unsigned subtraction
+				alures = sum_add_bneg;
+				OF = 1'b0;
+			end
+			SLT: begin // signed compare
+				alures = ($signed(A) < $signed(B)) ? 32'd1 : 32'd0;
+				OF = 1'b0;
+			end
+			SLTU: begin // unsigned compare
+				alures = (A < B) ? 32'd1 : 32'd0;
+				OF = 1'b0;
+			end
+			default: begin
+				alures = 32'b0;
+				OF = 1'b0;
+			end
+		endcase
+
+		// Zero flag for all operations: set when alures == 0
+		ZF = (alures == 32'b0);
+	end
 endmodule
