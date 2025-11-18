@@ -34,6 +34,13 @@ module alu(
 	wire [31:0] sum_add_bneg; // A + (~B) + 1  (used for subtraction)
 	wire        cout_add_bneg;
 
+	// 64-bit products for multiplication (avoid slicing expressions directly)
+	wire [63:0] prod_u;
+	wire signed [63:0] prod_s;
+
+	assign prod_u = $unsigned(A) * $unsigned(B);
+	assign prod_s = $signed(A) * $signed(B);
+
 	// instantiate rca for addition (A + B)
 	rca u_rca_add(
 		.a   (A),
@@ -90,11 +97,11 @@ module alu(
 				OF = 1'b0;
 			end
 			MULU: begin
-				alures = ($unsigned(A) * $unsigned(B))[31:0];
+				alures = prod_u[31:0];
 				OF = 1'b0;
 			end
 			MUL: begin
-				alures = ($signed(A) * $signed(B))[31:0];
+				alures = prod_s[31:0];
 				OF = 1'b0;
 			end
 			ADD: begin // signed addition using rca
