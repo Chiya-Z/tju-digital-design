@@ -1,0 +1,22 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port DDR_0 -pg 1 -y -210 -defaultsOSRD
+preplace port FIXED_IO_0 -pg 1 -y -190 -defaultsOSRD
+preplace inst cg_fpga_0 -pg 1 -lvl 2 -y -130 -defaultsOSRD
+preplace inst ALU_32bits_top_0 -pg 1 -lvl 1 -y -220 -defaultsOSRD
+preplace netloc cg_fpga_0_gpio_sw_1 1 0 3 -10 -330 NJ -330 550
+preplace netloc cg_fpga_0_DDR 1 2 1 N
+preplace netloc cg_fpga_0_btn_rst 1 0 3 -30 -360 NJ -360 570
+preplace netloc cg_fpga_0_gpio_sw_2 1 0 3 0 -320 NJ -320 540
+preplace netloc ALU_32bits_top_0_seg 1 1 1 240
+preplace netloc ALU_32bits_top_0_led 1 1 1 250
+preplace netloc cg_fpga_0_clk_100M 1 0 3 10 -340 NJ -340 560
+preplace netloc cg_fpga_0_FIXED_IO 1 2 1 N
+preplace netloc ALU_32bits_top_0_sel 1 1 1 230
+preplace netloc cg_fpga_0_btn 1 0 3 -20 -350 NJ -350 530
+levelinfo -pg 1 -50 120 390 590 -top -500 -bot 380
+"
+}
+
