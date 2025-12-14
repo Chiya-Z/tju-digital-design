@@ -1,5 +1,6 @@
 # compile verilog/system verilog design source files
 sv xil_defaultlib  \
+"../../../../UART.srcs/sources_1/new/BaudTickGen.sv" \
 "../../../../UART.srcs/sources_1/new/async_receiver.sv" \
 "../../../../UART.srcs/sim_1/new/tb_async_receiver.sv" \
 

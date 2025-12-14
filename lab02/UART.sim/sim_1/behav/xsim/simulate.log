@@ -1,12 +1,2 @@
 Vivado Simulator 2018.3
 Time resolution is 1 ps
-reference: 0x00, yours: 0x00
-reference: 0x01, yours: 0x01
-reference: 0x02, yours: 0x02
-reference: 0x03, yours: 0x03
-reference: 0x04, yours: 0x04
-reference: 0x05, yours: 0x05
-reference: 0x06, yours: 0x06
-reference: 0x07, yours: 0x07
-RX Test Pass!
-$finish called at time : 940 ns : File "D:/TJU/tju-digital-design/lab02/UART.srcs/sim_1/new/tb_async_receiver.sv" Line 72
