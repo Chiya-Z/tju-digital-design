@@ -5,7 +5,7 @@
 // The RS-232 settings are fixed
 // TX: 8-bit data, 2 stop, no-parity
 
-`define SIMULATION   // in this mode, TX outputs one bit per clock cycle
+//`define SIMULATION   // in this mode, TX outputs one bit per clock cycle
 
 ////////////////////////////////////////////////////////
 module async_transmitter(
