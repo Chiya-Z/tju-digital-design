@@ -88,6 +88,7 @@ end
 // 设计要点：
 //      - 仿真环境下：检测到起始位的同时，也接收起始位
 //      - 现实环境下：区分检测起始位与接收起始位，仅在最佳采样点更新状态
+logic [3:0] RxD_state = 0;
     always_ff @(posedge clk)
     case(RxD_state)
           4'b0000: if(~RxD_bit) RxD_state <= `ifdef SIMULATION 4'b1000 `else 4'b0001 `endif;  // 检测起始位
@@ -95,6 +96,15 @@ end
           // TODO: 补充状态机代码
 		 //        已给出检测起始位和接收起始位的代码
 		 //        状态寄存器的位宽以及状态编码允许自由修改
+          4'b1000: if(sampleNow) RxD_state  <= 4'b1001;
+		  4'b1001: if(sampleNow) RxD_state  <= 4'b1010;
+		  4'b1010: if(sampleNow) RxD_state  <= 4'b1011;
+		  4'b1011: if(sampleNow) RxD_state  <= 4'b1100;
+		  4'b1100: if(sampleNow) RxD_state  <= 4'b1101;
+		  4'b1101: if(sampleNow) RxD_state  <= 4'b1110;
+		  4'b1110: if(sampleNow) RxD_state  <= 4'b1111;
+		  4'b1111: if(sampleNow) RxD_state  <= 4'b0010;
+		  4'b0010: if(sampleNow) RxD_state  <= 4'b0000;
           default: if(sampleNow) RxD_state  <= 4'b0000;
     endcase
 /* ------------------------------------------ */
@@ -103,10 +113,31 @@ end
 // TODO: 补充移位寄存器代码（数据并行化）
 //       RxD_bit 信号经过了同步和过滤，请使用 RxD_bit 信号而不是 RxD 信号
 //       此后，在时钟上升沿，sampleNow 信号有效时才根据状态更新移位寄存器
+logic [7:0] data;
+always_ff @(posedge clk) begin
+	if (RxD_clear)
+		data <= 8'b0;
+	else if (RxD_state==4'b0000 && ~RxD_bit)
+		data <= 8'b0;
+	else if (sampleNow) begin
+		case(RxD_state)
+			4'b1000: data[0] <= RxD_bit;
+			4'b1001: data[1] <= RxD_bit;
+			4'b1010: data[2] <= RxD_bit;
+			4'b1011: data[3] <= RxD_bit;
+			4'b1100: data[4] <= RxD_bit;
+			4'b1101: data[5] <= RxD_bit;
+			4'b1110: data[6] <= RxD_bit;
+			4'b1111: data[7] <= RxD_bit;
+			default: data <= RxD_data;
+		endcase
+	end
+end
 /* ---------------------------------------------- */
 
 // TODO: output logic
 //       RxD_data 为移位寄存器的值
+assign RxD_data = data;
          
 always_ff @(posedge clk)
 begin

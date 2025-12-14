@@ -1,10 +1,12 @@
 Vivado Simulator 2018.3
 Time resolution is 1 ps
-Time: 160000 ns | Expected: 00 | Received: 00 | PASS
-Time: 270000 ns | Expected: 01 | Received: 01 | PASS
-Time: 380000 ns | Expected: 02 | Received: 02 | PASS
-Time: 490000 ns | Expected: 03 | Received: 03 | PASS
-Time: 600000 ns | Expected: 04 | Received: 04 | PASS
-Time: 710000 ns | Expected: 05 | Received: 05 | PASS
-Time: 820000 ns | Expected: 06 | Received: 06 | PASS
-Time: 930000 ns | Expected: 07 | Received: 07 | PASS
+reference: 0x00, yours: 0x00
+reference: 0x01, yours: 0x01
+reference: 0x02, yours: 0x02
+reference: 0x03, yours: 0x03
+reference: 0x04, yours: 0x04
+reference: 0x05, yours: 0x05
+reference: 0x06, yours: 0x06
+reference: 0x07, yours: 0x07
+RX Test Pass!
+$finish called at time : 940 ns : File "D:/TJU/tju-digital-design/lab02/UART.srcs/sim_1/new/tb_async_receiver.sv" Line 72
