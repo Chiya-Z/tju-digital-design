@@ -5,7 +5,7 @@
 // The RS-232 settings are fixed
 // TX: 8-bit data, 2 stop, no-parity
 
-//`define SIMULATION   // in this mode, TX outputs one bit per clock cycle
+`define SIMULATION   // in this mode, TX outputs one bit per clock cycle
 
 ////////////////////////////////////////////////////////
 module async_transmitter(
@@ -18,6 +18,12 @@ module async_transmitter(
 
 parameter ClkFrequency = 100000000;	// 100MHz
 parameter Baud = 9600;
+
+// 发送端状态
+localparam D0 = 4'b1000, D1 = 4'b1001, D2 = 4'b1010, D3 = 4'b1011,
+    D4 = 4'b1100, D5 = 4'b1101, D6 = 4'b1110, D7 = 4'b1111,
+    STOP1 = 4'b0001, STOP2 = 4'b0010;
+    
 
 /* -------------- 波特率时钟生成控制 -------------- */
 `ifdef SIMULATION
@@ -51,6 +57,17 @@ begin
 		// TODO: 补充状态机代码
 		//       已经给出了空闲状态到起始状态的转换
 		//       状态寄存器的位宽以及状态编码允许自由修改
+		4'b0100: if (BitTick) TxD_state <= D0;    // START -> D0
+		D0: if (BitTick) TxD_state <= D1;         // D0 -> D1
+		D1: if (BitTick) TxD_state <= D2;         // D1 -> D2
+		D2: if (BitTick) TxD_state <= D3;         // D2 -> D3
+		D3: if (BitTick) TxD_state <= D4;         // D3 -> D4
+		D4: if (BitTick) TxD_state <= D5;         // D4 -> D5
+		D5: if (BitTick) TxD_state <= D6;         // D5 -> D6
+		D7: if (BitTick) TxD_state <= D7;         // D6 -> D7
+		D7: if (BitTick) TxD_state <= STOP1;      // D7 -> STOP1
+		STOP1: if (BitTick) TxD_state <= STOP2;   // STOP1 -> STOP2
+		STOP2: if (BitTick) TxD_state <= 4'b0000; // STOP2 -> IDLE
 		default: if(BitTick) TxD_state <= 4'b0000;
 	endcase
 end
@@ -65,6 +82,24 @@ end
 //   - 位计数器随状态机推进，为串行数据输出提供位选择索引
 // TODO: 补充计数器代码
 // TODO: TxD 除了发送数据位，也要发送起始位和停止位
+// 位索引计数器：指示当前正在发送第几个数据位（0..7）
+logic [3:0] bit_cnt;
+always_ff @(posedge clk) begin
+    // 在 TxD_ready 和 TxD_start 同时有效时重置计数值
+    if (TxD_ready && TxD_start) begin
+        bit_cnt  <= 3'd0;
+    end
+    // 计数器随状态机推进（仅在 BitTick 有效时变化）
+    else if (BitTick) begin
+        // 每个 BitTick 推进一个 bit 索引
+        if (TxD_state >= D0 && TxD_state <= D7) bit_cnt <= bit_cnt + 3'd1;
+    end
+end
 
+always_comb begin
+    if (TxD_state == 4'b0100) TxD = 1'b0;
+    else if (bit_cnt >= 8) TxD = 1'b1;
+    else TxD = TxD_data[bit_cnt];
+end
 /* -------------------------------------- */
 endmodule

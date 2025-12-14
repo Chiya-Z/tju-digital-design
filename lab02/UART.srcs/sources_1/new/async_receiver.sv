@@ -5,7 +5,7 @@
 // The RS-232 settings are fixed
 // RX: 8-bit data, 1 stop, no-parity (the receiver can accept more stop bits of course)
 
-//`define SIMULATION   // in this mode, RX receives one bit per clock cycle (for fast simulations)
+`define SIMULATION   // in this mode, RX receives one bit per clock cycle (for fast simulations)
 
 ////////////////////////////////////////////////////////
 module async_receiver(
