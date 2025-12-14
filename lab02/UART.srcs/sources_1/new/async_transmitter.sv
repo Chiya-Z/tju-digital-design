@@ -22,7 +22,7 @@ parameter Baud = 9600;
 // 发送端状态
 localparam D0 = 4'b1000, D1 = 4'b1001, D2 = 4'b1010, D3 = 4'b1011,
     D4 = 4'b1100, D5 = 4'b1101, D6 = 4'b1110, D7 = 4'b1111,
-    STOP1 = 4'b0001, STOP2 = 4'b0010;
+    STOP = 4'b0010;
     
 
 /* -------------- 波特率时钟生成控制 -------------- */
@@ -64,10 +64,9 @@ begin
 		D3: if (BitTick) TxD_state <= D4;         // D3 -> D4
 		D4: if (BitTick) TxD_state <= D5;         // D4 -> D5
 		D5: if (BitTick) TxD_state <= D6;         // D5 -> D6
-		D7: if (BitTick) TxD_state <= D7;         // D6 -> D7
-		D7: if (BitTick) TxD_state <= STOP1;      // D7 -> STOP1
-		STOP1: if (BitTick) TxD_state <= STOP2;   // STOP1 -> STOP2
-		STOP2: if (BitTick) TxD_state <= 4'b0000; // STOP2 -> IDLE
+		D6: if (BitTick) TxD_state <= D7;         // D6 -> D7
+		D7: if (BitTick) TxD_state <= STOP;      // D7 -> STOP
+		STOP: if (BitTick) TxD_state <= 4'b0000; // STOP -> IDLE
 		default: if(BitTick) TxD_state <= 4'b0000;
 	endcase
 end
@@ -97,9 +96,10 @@ always_ff @(posedge clk) begin
 end
 
 always_comb begin
-    if (TxD_state == 4'b0100) TxD = 1'b0;
-    else if (bit_cnt >= 8) TxD = 1'b1;
-    else TxD = TxD_data[bit_cnt];
+	if (TxD_state == 4'b0000) TxD = 1'b1;
+	else if (TxD_state == 4'b0100) TxD = 1'b0;
+	else if (TxD_state == STOP) TxD = 1'b1;
+	else TxD = TxD_data[bit_cnt];
 end
 /* -------------------------------------- */
 endmodule

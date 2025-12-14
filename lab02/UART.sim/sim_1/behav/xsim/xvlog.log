@@ -2,5 +2,3 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/TJU/tju-digital-design/lab
 INFO: [VRFC 10-311] analyzing module async_transmitter
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/TJU/tju-digital-design/lab02/UART.srcs/sim_1/new/tb_async_transmitter.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module tb_async_transmitter
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/TJU/tju-digital-design/lab02/UART.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
