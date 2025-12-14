@@ -2,7 +2,8 @@
 2018.3
 Dec  7 2018
 00:33:28
-D:/project/cslab/lab/UART/UART.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
-D:/project/cslab/lab/UART/UART.srcs/sim_1/new/tb_async_receiver.sv,1764068586,systemVerilog,,,,tb_async_receiver,,,,,,,,
-D:/project/cslab/lab/UART/UART.srcs/sources_1/new/BaudTickGen.sv,1763906889,systemVerilog,,D:/project/cslab/lab/UART/UART.srcs/sources_1/new/async_receiver.sv,,BaudTickGen,,,,,,,,
-D:/project/cslab/lab/UART/UART.srcs/sources_1/new/async_receiver.sv,1764252246,systemVerilog,,D:/project/cslab/lab/UART/UART.srcs/sim_1/new/tb_async_receiver.sv,,async_receiver,,,,,,,,
+D:/TJU/tju-digital-design/lab02/UART.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+D:/TJU/tju-digital-design/lab02/UART.srcs/sim_1/new/tb_async_receiver.sv,1764068586,systemVerilog,,,,tb_async_receiver,,,,,,,,
+D:/TJU/tju-digital-design/lab02/UART.srcs/sim_1/new/tb_async_transmitter.sv,1764068421,systemVerilog,,,,tb_async_transmitter,,,,,,,,
+D:/TJU/tju-digital-design/lab02/UART.srcs/sources_1/new/async_receiver.sv,1765701881,systemVerilog,,D:/TJU/tju-digital-design/lab02/UART.srcs/sim_1/new/tb_async_receiver.sv,,async_receiver,,,,,,,,
+D:/TJU/tju-digital-design/lab02/UART.srcs/sources_1/new/async_transmitter.sv,1765701713,systemVerilog,,D:/TJU/tju-digital-design/lab02/UART.srcs/sim_1/new/tb_async_transmitter.sv,,async_transmitter,,,,,,,,

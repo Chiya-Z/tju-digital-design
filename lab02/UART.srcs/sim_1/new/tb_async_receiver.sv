@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-`define SIMULATION
+//`define SIMULATION
 module tb_async_receiver();
     logic         sys_clk;
     logic         rx;
