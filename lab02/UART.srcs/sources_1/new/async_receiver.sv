@@ -91,11 +91,17 @@ end
     always_ff @(posedge clk)
     case(RxD_state)
           4'b0000: if(~RxD_bit) RxD_state <= `ifdef SIMULATION 4'b1000 `else 4'b0001 `endif;  // �����ʼλ
-          4'b0001: if(sampleNow) RxD_state  <= 4'b1000;    // ������ʼλ
-          // TODO: ����״̬������
-		 //        �Ѹ��������ʼλ�ͽ�����ʼλ�Ĵ���
-		 //        ״̬�Ĵ�����λ���Լ�״̬�������������޸�
-          default: if(sampleNow) RxD_state  <= 4'b0000;
+		  4'b0001: if(sampleNow) RxD_state  <= 4'b1000;
+		  4'b1000: if(sampleNow) RxD_state  <= 4'b1001;
+		  4'b1001: if(sampleNow) RxD_state  <= 4'b1010;
+		  4'b1010: if(sampleNow) RxD_state  <= 4'b1011;
+		  4'b1011: if(sampleNow) RxD_state  <= 4'b1100;
+		  4'b1100: if(sampleNow) RxD_state  <= 4'b1101;
+		  4'b1101: if(sampleNow) RxD_state  <= 4'b1110;
+		  4'b1110: if(sampleNow) RxD_state  <= 4'b1111;
+		  4'b1111: if(sampleNow) RxD_state  <= 4'b0010;
+		  4'b0010: if(sampleNow) RxD_state  <= 4'b0000;
+		  default: if(sampleNow) RxD_state  <= 4'b0000;
     endcase
 /* ------------------------------------------ */
 
@@ -104,6 +110,17 @@ end
 //       RxD_bit �źž�����ͬ���͹��ˣ���ʹ�� RxD_bit �źŶ����� RxD �ź�
 //       �˺���ʱ�������أ�sampleNow �ź���Чʱ�Ÿ���״̬������λ�Ĵ���
 /* ---------------------------------------------- */
+
+always_ff @(posedge clk)
+begin
+	if(RxD_state==4'b0000 && ~RxD_bit)
+		RxD_data <= 8'h00;
+	else if(sampleNow)
+	begin
+		if(RxD_state>=4'b1000 && RxD_state<=4'b1111)
+			RxD_data <= {RxD_bit, RxD_data[7:1]};
+	end
+end
 
 // TODO: output logic
 //       RxD_data Ϊ��λ�Ĵ�����ֵ
