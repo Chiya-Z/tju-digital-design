@@ -1,0 +1,10 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+Time: 160000 ns | Expected: 00 | Received: 00 | PASS
+Time: 270000 ns | Expected: 01 | Received: 01 | PASS
+Time: 380000 ns | Expected: 02 | Received: 02 | PASS
+Time: 490000 ns | Expected: 03 | Received: 03 | PASS
+Time: 600000 ns | Expected: 04 | Received: 04 | PASS
+Time: 710000 ns | Expected: 05 | Received: 05 | PASS
+Time: 820000 ns | Expected: 06 | Received: 06 | PASS
+Time: 930000 ns | Expected: 07 | Received: 07 | PASS
