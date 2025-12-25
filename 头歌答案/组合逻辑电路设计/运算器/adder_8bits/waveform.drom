@@ -1,0 +1,55 @@
+{
+    "signal": [
+	["输入",
+        {
+            "name": "tb_adder_8bits.U0.A[7:0]",
+            "wave": "====.",
+            "data": [
+                "21",
+                "A1",
+                "79",
+                "E9"
+            ]
+        },
+        {
+            "name": "tb_adder_8bits.U0.B[7:0]",
+            "wave": "====.",
+            "data": [
+                "2D",
+                "8F",
+                "6D",
+                "67"
+            ]
+        },
+        {
+            "name": "tb_adder_8bits.U0.Cin",
+            "wave": "1010.",
+            "data": []
+        },
+	],
+	["输出",
+        {
+            "name": "tb_adder_8bits.U0.S[7:0]",
+            "wave": "====.",
+            "data": [
+                "4F",
+                "30",
+                "E7",
+                "50"
+            ]
+        },
+        {
+            "name": "tb_adder_8bits.U0.Cout",
+            "wave": "0101.",
+            "data": []
+        }
+	]
+    ],
+    "config": {
+        "hscale": 1
+    },
+    "foot": {
+        "text": "Timing Diagram",
+        "tick": 0
+    }
+}

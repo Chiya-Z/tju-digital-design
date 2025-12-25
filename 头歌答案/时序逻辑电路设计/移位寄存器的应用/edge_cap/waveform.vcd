@@ -1,0 +1,107 @@
+$date
+	Fri Jan 14 11:07:08 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module tb_edge_cap $end
+$scope module U0 $end
+$var wire 1 ! sys_clk $end
+$upscope $end
+$upscope $end
+$scope module tb_edge_cap $end
+$scope module U0 $end
+$var wire 1 " sys_rst_n $end
+$upscope $end
+$upscope $end
+$scope module tb_edge_cap $end
+$scope module U0 $end
+$var wire 1 # i_btn $end
+$upscope $end
+$upscope $end
+$scope module tb_edge_cap $end
+$scope module U0 $end
+$var reg 1 $ out $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x$
+0#
+0"
+0!
+$end
+#5
+0$
+1!
+#10
+0!
+#15
+1!
+#20
+1"
+0!
+#25
+1#
+1!
+#30
+0!
+#35
+1!
+#40
+0!
+#45
+1!
+#50
+0!
+#55
+1!
+#60
+0!
+#65
+1!
+#70
+0!
+#75
+0#
+1!
+#80
+0!
+#85
+1#
+1!
+#90
+0!
+#95
+1$
+1!
+#100
+0!
+#105
+0"
+1!
+#110
+0!
+#115
+0#
+1"
+0$
+1!
+#120
+0!
+#125
+1#
+1!
+#130
+0!
+#135
+1$
+1!
+#140
+0!
+#145
+1!

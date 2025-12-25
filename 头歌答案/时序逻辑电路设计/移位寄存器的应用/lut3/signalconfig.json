@@ -1,0 +1,20 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_lut3.U0.sys_clk",
+        "tb_lut3.U0.sys_rst_n",
+        "tb_lut3.U0.en",
+        "tb_lut3.U0.S",
+        "tb_lut3.U0.Q[7:0]",
+        "tb_lut3.U0.A",
+        "tb_lut3.U0.B",
+        "tb_lut3.U0.C",
+        "tb_lut3.U0.Z"
+    ],
+    
+    "offset": 0,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 140
+}

@@ -1,0 +1,40 @@
+$date
+	Wed Dec 15 22:18:41 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module tb_reduc $end
+$scope module U0 $end
+$var wire 8 ! in [7:0] $end
+$var wire 1 " parity $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0"
+b0 !
+$end
+#5
+1"
+b1 !
+#10
+0"
+b11 !
+#15
+1"
+b10101 !
+#20
+b10100111 !
+#25
+b100110 !
+#30
+0"
+b10111000 !
+#35
+b11111111 !
+#40

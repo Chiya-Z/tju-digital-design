@@ -1,0 +1,9 @@
+VCD info: dumpfile waveform.vcd opened for output.
+At time   0ns: a = 0, b = 1, sel_b1 = 0, sel_b2 = 0, out_assign = 0, out_alwaysblock = 0
+At time   5ns: a = 0, b = 1, sel_b1 = 1, sel_b2 = 0, out_assign = 0, out_alwaysblock = 0
+At time  10ns: a = 0, b = 1, sel_b1 = 0, sel_b2 = 1, out_assign = 0, out_alwaysblock = 0
+At time  15ns: a = 0, b = 1, sel_b1 = 1, sel_b2 = 1, out_assign = 1, out_alwaysblock = 1
+At time  20ns: a = 1, b = 0, sel_b1 = 0, sel_b2 = 0, out_assign = 1, out_alwaysblock = 1
+At time  25ns: a = 1, b = 0, sel_b1 = 1, sel_b2 = 0, out_assign = 1, out_alwaysblock = 1
+At time  30ns: a = 1, b = 0, sel_b1 = 0, sel_b2 = 1, out_assign = 1, out_alwaysblock = 1
+At time  35ns: a = 1, b = 0, sel_b1 = 1, sel_b2 = 1, out_assign = 0, out_alwaysblock = 0

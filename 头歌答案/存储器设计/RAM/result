@@ -1,0 +1,18 @@
+VCD info: dumpfile waveform.vcd opened for output.
+At time   0ns: we = 0, addr = 0, din = 0000, dout=xxxx
+At time   5ns: we = 1, addr = 0, din = 0000, dout=xxxx
+At time  15ns: we = 1, addr = 1, din = 0001, dout=xxxx
+At time  25ns: we = 1, addr = 2, din = 0002, dout=xxxx
+At time  35ns: we = 1, addr = 3, din = 0003, dout=xxxx
+At time  45ns: we = 1, addr = 4, din = 0004, dout=xxxx
+At time  55ns: we = 1, addr = 5, din = 0005, dout=xxxx
+At time  65ns: we = 1, addr = 6, din = 0006, dout=xxxx
+At time  75ns: we = 1, addr = 7, din = 0007, dout=xxxx
+At time  85ns: we = 0, addr = 0, din = 0007, dout=0000
+At time  95ns: we = 0, addr = 1, din = 0007, dout=0001
+At time 105ns: we = 0, addr = 2, din = 0007, dout=0002
+At time 115ns: we = 0, addr = 3, din = 0007, dout=0003
+At time 125ns: we = 0, addr = 4, din = 0007, dout=0004
+At time 135ns: we = 0, addr = 5, din = 0007, dout=0005
+At time 145ns: we = 0, addr = 6, din = 0007, dout=0006
+At time 155ns: we = 0, addr = 7, din = 0007, dout=0007

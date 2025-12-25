@@ -1,0 +1,13 @@
+{
+    "signal": {
+    },
+    "filter": [
+    "tb_vector_sel.U0.in[31:0]",
+	"tb_vector_sel.U0.out[31:0]"
+    ],
+    
+    "offset": 5,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 80
+}

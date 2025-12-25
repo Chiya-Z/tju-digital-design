@@ -1,0 +1,17 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_wire_decl.U0.a",
+        "tb_wire_decl.U0.b",
+	"tb_wire_decl.U0.c",
+	"tb_wire_decl.U0.d",
+	"tb_wire_decl.U0.out",
+	"tb_wire_decl.U0.out_n"
+    ],
+    
+    "offset": 5,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 130
+}

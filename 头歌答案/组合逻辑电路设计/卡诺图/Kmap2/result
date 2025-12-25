@@ -1,0 +1,17 @@
+VCD info: dumpfile waveform.vcd opened for output.
+At time   0ns: a = 0, b = 0, c = 0, d = 0, out = 1
+At time   5ns: a = 0, b = 0, c = 0, d = 1, out = 1
+At time  10ns: a = 0, b = 0, c = 1, d = 0, out = 1
+At time  15ns: a = 0, b = 0, c = 1, d = 1, out = 0
+At time  20ns: a = 0, b = 1, c = 0, d = 0, out = 1
+At time  25ns: a = 0, b = 1, c = 0, d = 1, out = 0
+At time  30ns: a = 0, b = 1, c = 1, d = 0, out = 1
+At time  35ns: a = 0, b = 1, c = 1, d = 1, out = 1
+At time  40ns: a = 1, b = 0, c = 0, d = 0, out = 1
+At time  45ns: a = 1, b = 0, c = 0, d = 1, out = 1
+At time  50ns: a = 1, b = 0, c = 1, d = 0, out = 0
+At time  55ns: a = 1, b = 0, c = 1, d = 1, out = 1
+At time  60ns: a = 1, b = 1, c = 0, d = 0, out = 0
+At time  65ns: a = 1, b = 1, c = 0, d = 1, out = 0
+At time  70ns: a = 1, b = 1, c = 1, d = 0, out = 0
+At time  75ns: a = 1, b = 1, c = 1, d = 1, out = 1

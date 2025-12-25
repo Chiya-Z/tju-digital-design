@@ -1,0 +1,146 @@
+$date
+	Sat Jan  8 21:59:29 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module tb_gray_4bits $end
+$scope module U0 $end
+$var wire 1 ! EN $end
+$upscope $end
+$upscope $end
+$scope module tb_gray_4bits $end
+$scope module U0 $end
+$var wire 4 " Din [3:0] $end
+$upscope $end
+$upscope $end
+$scope module tb_gray_4bits $end
+$scope module U0 $end
+$var wire 1 # gray_n $end
+$upscope $end
+$upscope $end
+$scope module tb_gray_4bits $end
+$scope module U0 $end
+$var reg 4 $ Dout [3:0] $end
+$upscope $end
+$upscope $end
+$scope module tb_gray_4bits $end
+$scope module U0 $end
+$var reg 1 % valid $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0%
+b0 $
+0#
+b0 "
+0!
+$end
+#10
+1%
+1!
+#15
+b1 $
+b1 "
+#20
+b11 $
+b10 "
+#25
+b10 $
+b11 "
+#30
+b110 $
+b100 "
+#35
+b111 $
+b101 "
+#40
+b101 $
+b110 "
+#45
+b100 $
+b111 "
+#50
+b1100 $
+b1000 "
+#55
+b1101 $
+b1001 "
+#60
+b1111 $
+b1010 "
+#65
+b1110 $
+b1011 "
+#70
+b1010 $
+b1100 "
+#75
+b1011 $
+b1101 "
+#80
+b1001 $
+b1110 "
+#85
+b1000 $
+b1111 "
+#90
+0%
+b0 $
+b0 "
+1#
+0!
+#100
+1%
+1!
+#105
+b1 $
+b1 "
+#110
+b10 $
+b11 "
+#115
+b11 $
+b10 "
+#120
+b100 $
+b110 "
+#125
+b101 $
+b111 "
+#130
+b110 $
+b101 "
+#135
+b111 $
+b100 "
+#140
+b1000 $
+b1100 "
+#145
+b1001 $
+b1101 "
+#150
+b1010 $
+b1111 "
+#155
+b1011 $
+b1110 "
+#160
+b1100 $
+b1010 "
+#165
+b1101 $
+b1011 "
+#170
+b1110 $
+b1001 "
+#175
+b1111 $
+b1000 "
+#180

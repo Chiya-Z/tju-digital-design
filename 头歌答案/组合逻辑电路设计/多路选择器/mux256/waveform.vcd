@@ -1,0 +1,72 @@
+$date
+	Fri Jan  7 16:46:26 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module tb_mux256 $end
+$scope module U0 $end
+$var wire 256 ! D [255:0] $end
+$upscope $end
+$upscope $end
+$scope module tb_mux256 $end
+$scope module U0 $end
+$var wire 8 " sel [7:0] $end
+$upscope $end
+$upscope $end
+$scope module tb_mux256 $end
+$scope module U0 $end
+$var wire 1 # Y $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1#
+b0 "
+b1010101111001101 !
+$end
+#5
+0#
+b1 "
+#10
+1#
+b10 "
+#15
+b11 "
+#20
+0#
+b100 "
+#25
+b101 "
+#30
+1#
+b110 "
+#35
+b111 "
+#40
+b1000 "
+#45
+b1001 "
+#50
+0#
+b1010 "
+#55
+1#
+b1011 "
+#60
+0#
+b1100 "
+#65
+1#
+b1101 "
+#70
+0#
+b1110 "
+#75
+1#
+b1111 "
+#85

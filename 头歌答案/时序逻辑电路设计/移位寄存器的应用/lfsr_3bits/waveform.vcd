@@ -1,0 +1,98 @@
+$date
+	Tue Jan 11 16:47:31 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module tb_lfsr_3bits $end
+$scope module U0 $end
+$var wire 1 ! sys_clk $end
+$upscope $end
+$upscope $end
+$scope module tb_lfsr_3bits $end
+$scope module U0 $end
+$var wire 1 " sys_rst_n $end
+$upscope $end
+$upscope $end
+$scope module tb_lfsr_3bits $end
+$scope module U0 $end
+$var wire 1 # L $end
+$upscope $end
+$upscope $end
+$scope module tb_lfsr_3bits $end
+$scope module U0 $end
+$var wire 3 $ R [2:0] $end
+$upscope $end
+$upscope $end
+$scope module tb_lfsr_3bits $end
+$scope module U0 $end
+$var wire 3 % prNUM [2:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx %
+b1 $
+0#
+0"
+0!
+$end
+#5
+b0 %
+1!
+#10
+0!
+#15
+1!
+#20
+1#
+1"
+0!
+#25
+b1 %
+0#
+1!
+#30
+0!
+#35
+b10 %
+1!
+#40
+0!
+#45
+b100 %
+1!
+#50
+0!
+#55
+b101 %
+1!
+#60
+0!
+#65
+b111 %
+1!
+#70
+0!
+#75
+b11 %
+1!
+#80
+0!
+#85
+b110 %
+1!
+#90
+0!
+#95
+b1 %
+1!
+#100
+0!
+#105
+b10 %
+1!

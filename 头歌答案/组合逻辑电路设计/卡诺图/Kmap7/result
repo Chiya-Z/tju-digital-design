@@ -1,0 +1,17 @@
+VCD info: dumpfile waveform.vcd opened for output.
+At time   0ns: x = 0000, out = 1
+At time   5ns: x = 0001, out = 1
+At time  10ns: x = 0010, out = 0
+At time  15ns: x = 0011, out = 0
+At time  20ns: x = 0100, out = 1
+At time  25ns: x = 0101, out = 1
+At time  30ns: x = 0110, out = 1
+At time  35ns: x = 0111, out = 0
+At time  40ns: x = 1000, out = 0
+At time  45ns: x = 1001, out = 0
+At time  50ns: x = 1010, out = 0
+At time  55ns: x = 1011, out = 0
+At time  60ns: x = 1100, out = 1
+At time  65ns: x = 1101, out = 0
+At time  70ns: x = 1110, out = 1
+At time  75ns: x = 1111, out = 1

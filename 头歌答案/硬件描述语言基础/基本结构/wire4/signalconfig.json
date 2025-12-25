@@ -1,0 +1,19 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_wire4.U0.a",
+        "tb_wire4.U0.b",
+	"tb_wire4.U0.c",
+	"tb_wire4.U0.d",
+	"tb_wire4.U0.w",
+	"tb_wire4.U0.x",
+	"tb_wire4.U0.y",
+	"tb_wire4.U0.z"
+    ],
+    
+    "offset": 5,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 75
+}

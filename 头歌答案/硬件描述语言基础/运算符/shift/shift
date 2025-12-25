@@ -1,0 +1,87 @@
+#! /usr/local/bin/vvp
+:ivl_version "11.0 (stable)" "(v11_0)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/usr/local/lib/ivl/system.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/lib/ivl/va_math.vpi";
+:vpi_module "/usr/local/lib/ivl/v2009.vpi";
+S_0x55eb1f8c48a0 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0x55eb1f8d38c0 .scope module, "tb_shift" "tb_shift" 3 3;
+ .timescale -9 -9;
+v0x55eb1f8ec070_0 .var "in", 7 0;
+v0x55eb1f8ec150_0 .var "num", 2 0;
+v0x55eb1f8ec1f0_0 .net "out_lsa", 7 0, L_0x55eb1f8ec7d0;  1 drivers
+v0x55eb1f8ec2c0_0 .net "out_lsl", 7 0, L_0x55eb1f8ec550;  1 drivers
+v0x55eb1f8ec390_0 .net "out_rsa", 7 0, L_0x55eb1f8ec950;  1 drivers
+v0x55eb1f8ec480_0 .net "out_rsl", 7 0, L_0x55eb1f8ec6e0;  1 drivers
+S_0x55eb1f8d3a50 .scope module, "U0" "shift" 3 9, 4 1 0, S_0x55eb1f8d38c0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 8 "in";
+    .port_info 1 /INPUT 3 "num";
+    .port_info 2 /OUTPUT 8 "out_lsl";
+    .port_info 3 /OUTPUT 8 "out_rsl";
+    .port_info 4 /OUTPUT 8 "out_lsa";
+    .port_info 5 /OUTPUT 8 "out_rsa";
+v0x55eb1f8c20e0_0 .net "in", 7 0, v0x55eb1f8ec070_0;  1 drivers
+v0x55eb1f8ebb20_0 .net "num", 2 0, v0x55eb1f8ec150_0;  1 drivers
+v0x55eb1f8ebc00_0 .net "out_lsa", 7 0, L_0x55eb1f8ec7d0;  alias, 1 drivers
+v0x55eb1f8ebcc0_0 .net "out_lsl", 7 0, L_0x55eb1f8ec550;  alias, 1 drivers
+v0x55eb1f8ebda0_0 .net "out_rsa", 7 0, L_0x55eb1f8ec950;  alias, 1 drivers
+v0x55eb1f8ebed0_0 .net "out_rsl", 7 0, L_0x55eb1f8ec6e0;  alias, 1 drivers
+L_0x55eb1f8ec550 .shift/l 8, v0x55eb1f8ec070_0, v0x55eb1f8ec150_0;
+L_0x55eb1f8ec6e0 .shift/r 8, v0x55eb1f8ec070_0, v0x55eb1f8ec150_0;
+L_0x55eb1f8ec7d0 .shift/l 8, v0x55eb1f8ec070_0, v0x55eb1f8ec150_0;
+L_0x55eb1f8ec950 .shift/rs 8, v0x55eb1f8ec070_0, v0x55eb1f8ec150_0;
+    .scope S_0x55eb1f8d38c0;
+T_0 ;
+    %pushi/vec4 8, 0, 8;
+    %store/vec4 v0x55eb1f8ec070_0, 0, 8;
+    %pushi/vec4 4, 0, 3;
+    %store/vec4 v0x55eb1f8ec150_0, 0, 3;
+    %delay 10, 0;
+    %pushi/vec4 244, 0, 8;
+    %store/vec4 v0x55eb1f8ec070_0, 0, 8;
+    %pushi/vec4 4, 0, 3;
+    %store/vec4 v0x55eb1f8ec150_0, 0, 3;
+    %delay 10, 0;
+    %pushi/vec4 215, 0, 8;
+    %store/vec4 v0x55eb1f8ec070_0, 0, 8;
+    %pushi/vec4 3, 0, 3;
+    %store/vec4 v0x55eb1f8ec150_0, 0, 3;
+    %delay 10, 0;
+    %pushi/vec4 150, 0, 8;
+    %store/vec4 v0x55eb1f8ec070_0, 0, 8;
+    %pushi/vec4 5, 0, 3;
+    %store/vec4 v0x55eb1f8ec150_0, 0, 3;
+    %delay 10, 0;
+    %pushi/vec4 24, 0, 8;
+    %store/vec4 v0x55eb1f8ec070_0, 0, 8;
+    %pushi/vec4 2, 0, 3;
+    %store/vec4 v0x55eb1f8ec150_0, 0, 3;
+    %delay 5, 0;
+    %vpi_call/w 3 22 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0x55eb1f8d38c0;
+T_1 ;
+    %vpi_call/w 3 27 "$timeformat", 32'sb11111111111111111111111111110111, 32'sb00000000000000000000000000000000, "ns", 32'sb00000000000000000000000000000101 {0 0 0};
+    %vpi_call/w 3 28 "$monitor", "At time %t: in = 0x%x(%b),  num = 0x%x, out_lsl = 0x%x(%b), out_rsl = 0x%x(%b), out_lsa = 0x%x(%b), out_rsa = 0x%x(%b)", $time, v0x55eb1f8ec070_0, v0x55eb1f8ec070_0, v0x55eb1f8ec150_0, v0x55eb1f8ec2c0_0, v0x55eb1f8ec2c0_0, v0x55eb1f8ec480_0, v0x55eb1f8ec480_0, v0x55eb1f8ec1f0_0, v0x55eb1f8ec1f0_0, v0x55eb1f8ec390_0, v0x55eb1f8ec390_0 {0 0 0};
+    %end;
+    .thread T_1;
+    .scope S_0x55eb1f8d38c0;
+T_2 ;
+    %vpi_call/w 3 34 "$dumpfile", "waveform.vcd" {0 0 0};
+    %vpi_call/w 3 35 "$dumpvars", 32'sb00000000000000000000000000000001, S_0x55eb1f8d3a50 {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "-";
+    "tb_shift.v";
+    "shift.v";

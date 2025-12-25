@@ -1,0 +1,35 @@
+{
+    "signal": [
+	["输入",
+        {
+            "name": "tb_vector_sel.U0.in[31:0]",
+            "wave": "=...=...=...=....",
+            "data": [
+                "13E589A8",
+                "F207CB89",
+                "B1F05663",
+                "F3D304"
+            ]
+        },
+	],
+	["输出",
+        {
+            "name": "tb_vector_sel.U0.out[31:0]",
+            "wave": "=...=...=...=....",
+            "data": [
+                "A889E513",
+                "89CB07F2",
+                "6356F0B1",
+                "4D3F300"
+            ]
+        }
+	]
+    ],
+    "config": {
+        "hscale": 1
+    },
+    "foot": {
+        "text": "Timing Diagram",
+        "tick": 0
+    }
+}

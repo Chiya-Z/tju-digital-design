@@ -1,0 +1,9 @@
+VCD info: dumpfile waveform.vcd opened for output.
+At time   0ns: D = 0, Q = x
+At time   5ns: D = 0, Q = 0
+At time  45ns: D = 1, Q = 0
+At time  55ns: D = 1, Q = 1
+At time  75ns: D = 0, Q = 1
+At time  85ns: D = 0, Q = 0
+At time 125ns: D = 1, Q = 0
+At time 135ns: D = 1, Q = 1

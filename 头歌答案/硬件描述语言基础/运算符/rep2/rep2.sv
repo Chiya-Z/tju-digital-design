@@ -1,0 +1,9 @@
+module rep2 (
+	input 				a, b, c, d, e,
+	output	[24 : 0] 	out
+);
+
+	// 代码量预计1行
+	assign out = ~({{5{a}}, {5{b}}, {5{c}}, {5{d}}, {5{e}}} ^ {{5{a, b, c, d ,e}}});
+
+endmodule

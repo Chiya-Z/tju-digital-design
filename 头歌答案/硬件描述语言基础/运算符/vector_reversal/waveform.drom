@@ -1,0 +1,43 @@
+{
+    "signal": [
+	["输入",
+        {
+            "name": "tb_vector_reversal.U0.in[7:0]",
+            "wave": "========.",
+            "data": [
+                "0",
+                "1",
+                "2",
+                "4",
+                "8",
+                "C0",
+                "E0",
+                "F0"
+            ]
+        },
+	],
+	["输出",
+        {
+            "name": "tb_vector_reversal.U0.out[7:0]",
+            "wave": "========.",
+            "data": [
+                "0",
+                "80",
+                "40",
+                "20",
+                "10",
+                "3",
+                "7",
+                "F"
+            ]
+        }
+	]
+    ],
+    "config": {
+        "hscale": 1
+    },
+    "foot": {
+        "text": "Timing Diagram",
+        "tick": 0
+    }
+}

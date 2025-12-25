@@ -1,0 +1,98 @@
+$date
+	Sun Jan  9 21:10:49 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module tb_Kmap4 $end
+$scope module U0 $end
+$var wire 1 ! a $end
+$upscope $end
+$upscope $end
+$scope module tb_Kmap4 $end
+$scope module U0 $end
+$var wire 1 " b $end
+$upscope $end
+$upscope $end
+$scope module tb_Kmap4 $end
+$scope module U0 $end
+$var wire 1 # c $end
+$upscope $end
+$upscope $end
+$scope module tb_Kmap4 $end
+$scope module U0 $end
+$var wire 1 $ d $end
+$upscope $end
+$upscope $end
+$scope module tb_Kmap4 $end
+$scope module U0 $end
+$var wire 1 % out $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0%
+0$
+0#
+0"
+0!
+$end
+#5
+1%
+1$
+#10
+1#
+0$
+#15
+0%
+1$
+#20
+1%
+1"
+0#
+0$
+#25
+0%
+1$
+#30
+0%
+1#
+0$
+#35
+1%
+1$
+#40
+1%
+1!
+0"
+0#
+0$
+#45
+0%
+1$
+#50
+0%
+1#
+0$
+#55
+1%
+1$
+#60
+0%
+1"
+0#
+0$
+#65
+1%
+1$
+#70
+1#
+0$
+#75
+0%
+1$
+#85

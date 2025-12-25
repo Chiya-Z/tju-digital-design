@@ -1,0 +1,119 @@
+$date
+	Sun Jan 16 09:41:46 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module tb_Lemmings1 $end
+$scope module U0 $end
+$var wire 1 ! sys_clk $end
+$upscope $end
+$upscope $end
+$scope module tb_Lemmings1 $end
+$scope module U0 $end
+$var wire 1 " sys_rst_n $end
+$upscope $end
+$upscope $end
+$scope module tb_Lemmings1 $end
+$scope module U0 $end
+$var wire 1 # bump_left $end
+$upscope $end
+$upscope $end
+$scope module tb_Lemmings1 $end
+$scope module U0 $end
+$var wire 1 $ bump_right $end
+$upscope $end
+$upscope $end
+$scope module tb_Lemmings1 $end
+$scope module U0 $end
+$var reg 1 % cstate $end
+$upscope $end
+$upscope $end
+$scope module tb_Lemmings1 $end
+$scope module U0 $end
+$var reg 1 & nstate $end
+$upscope $end
+$upscope $end
+$scope module tb_Lemmings1 $end
+$scope module U0 $end
+$var wire 1 ' walk_left $end
+$upscope $end
+$upscope $end
+$scope module tb_Lemmings1 $end
+$scope module U0 $end
+$var wire 1 ( walk_right $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x(
+x'
+x&
+x%
+0$
+0#
+0"
+0!
+$end
+#5
+0&
+0(
+1'
+0%
+1!
+#10
+0!
+#15
+1!
+#20
+1"
+0!
+#25
+1$
+1!
+#30
+0!
+#35
+1&
+1#
+0$
+1!
+#40
+0!
+#45
+1(
+0'
+0&
+1%
+0#
+1$
+1!
+#50
+0!
+#55
+1&
+0(
+1'
+1#
+0%
+1!
+#60
+0!
+#65
+0&
+1(
+0'
+1%
+1!
+#70
+0!
+#75
+1&
+0(
+1'
+0%
+1!

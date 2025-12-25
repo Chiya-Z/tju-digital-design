@@ -1,0 +1,47 @@
+{
+    "signal": [
+	["输入",
+        {
+            "name": "tb_nolatches.U0.scancode[15:0]",
+            "wave": "======.",
+            "data": [
+                "E06B",
+                "E072",
+                "E074",
+                "E075",
+                "E068",
+                "D406"
+            ]
+        },
+	],
+	["输出",
+        {
+            "name": "tb_nolatches.U0.left",
+            "wave": "10.....",
+            "data": []
+        },
+        {
+            "name": "tb_nolatches.U0.down",
+            "wave": "010....",
+            "data": []
+        },
+        {
+            "name": "tb_nolatches.U0.right",
+            "wave": "0.10...",
+            "data": []
+        },
+        {
+            "name": "tb_nolatches.U0.up",
+            "wave": "0..10..",
+            "data": []
+        }
+	]
+    ],
+    "config": {
+        "hscale": 1
+    },
+    "foot": {
+        "text": "Timing Diagram",
+        "tick": 0
+    }
+}

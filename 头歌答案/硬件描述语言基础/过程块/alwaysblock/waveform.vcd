@@ -1,0 +1,47 @@
+$date
+	Thu Dec 16 21:27:48 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module tb_alwaysblock $end
+$scope module U0 $end
+$var wire 1 ! a $end
+$upscope $end
+$upscope $end
+$scope module tb_alwaysblock $end
+$scope module U0 $end
+$var wire 1 " b $end
+$upscope $end
+$upscope $end
+$scope module tb_alwaysblock $end
+$scope module U0 $end
+$var wire 1 # out_assign $end
+$upscope $end
+$upscope $end
+$scope module tb_alwaysblock $end
+$scope module U0 $end
+$var reg 1 $ out_alwaysblock $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0$
+0#
+0"
+0!
+$end
+#5
+1"
+#10
+0"
+1!
+#15
+1#
+1$
+1"
+#20

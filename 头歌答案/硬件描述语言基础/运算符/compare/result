@@ -1,0 +1,7 @@
+VCD info: dumpfile waveform.vcd opened for output.
+At time   0ns: a = 0x23,  b = 0x23, flag = 0x1(001), flag_s = 0x1(001)
+At time  10ns: a = 0xab,  b = 0xab, flag = 0x1(001), flag_s = 0x1(001)
+At time  20ns: a = 0xab,  b = 0x23, flag = 0x4(100), flag_s = 0x2(010)
+At time  30ns: a = 0x23,  b = 0xab, flag = 0x2(010), flag_s = 0x4(100)
+At time  40ns: a = 0x23,  b = 0x46, flag = 0x2(010), flag_s = 0x2(010)
+At time  50ns: a = 0xab,  b = 0xaf, flag = 0x2(010), flag_s = 0x4(100)

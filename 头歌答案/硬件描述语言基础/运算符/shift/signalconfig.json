@@ -1,0 +1,17 @@
+{
+    "signal": {
+    },
+    "filter": [
+    "tb_shift.U0.in[7:0]",
+	"tb_shift.U0.num[2:0]",
+	"tb_shift.U0.out_lsl[7:0]",
+	"tb_shift.U0.out_rsl[7:0]",
+	"tb_shift.U0.out_lsa[7:0]",
+    "tb_shift.U0.out_rsa[7:0]"
+    ],
+    
+    "offset": 5,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 50
+}

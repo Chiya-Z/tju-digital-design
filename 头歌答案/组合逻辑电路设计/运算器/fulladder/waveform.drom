@@ -1,0 +1,40 @@
+{
+    "signal": [
+	["输入",
+        {
+            "name": "tb_fulladder.U0.A",
+            "wave": "0...1.....",
+            "data": []
+        },
+        {
+            "name": "tb_fulladder.U0.B",
+            "wave": "0.1.0.1...",
+            "data": []
+        },
+        {
+            "name": "tb_fulladder.U0.Cin",
+            "wave": "01010101..",
+            "data": []
+        },
+	],
+	["输出",
+        {
+            "name": "tb_fulladder.U0.S",
+            "wave": "01.010.1..",
+            "data": []
+        },
+        {
+            "name": "tb_fulladder.U0.Cout",
+            "wave": "0..101....",
+            "data": []
+        }
+	]
+    ],
+    "config": {
+        "hscale": 1
+    },
+    "foot": {
+        "text": "Timing Diagram",
+        "tick": 0
+    }
+}

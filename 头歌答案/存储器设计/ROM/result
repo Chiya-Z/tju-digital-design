@@ -1,0 +1,9 @@
+VCD info: dumpfile waveform.vcd opened for output.
+At time   0ns: addr = 0, dout=1234
+At time  10ns: addr = 1, dout=5678
+At time  20ns: addr = 2, dout=abcd
+At time  30ns: addr = 3, dout=eeff
+At time  40ns: addr = 4, dout=78cd
+At time  50ns: addr = 5, dout=ab23
+At time  60ns: addr = 6, dout=5566
+At time  70ns: addr = 7, dout=2299

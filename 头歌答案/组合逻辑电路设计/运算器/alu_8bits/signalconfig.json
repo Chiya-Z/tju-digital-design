@@ -1,0 +1,19 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_alu_8bits.U0.A[7:0]",
+        "tb_alu_8bits.U0.B[7:0]",
+        "tb_alu_8bits.U0.aluop[3:0]",
+        "tb_alu_8bits.U0.alu_res[7:0]",
+        "tb_alu_8bits.U0.ZF",
+        "tb_alu_8bits.U0.SF",
+        "tb_alu_8bits.U0.OF",
+        "tb_alu_8bits.U0.CF"
+    ],
+    
+    "offset": 0,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 115
+}

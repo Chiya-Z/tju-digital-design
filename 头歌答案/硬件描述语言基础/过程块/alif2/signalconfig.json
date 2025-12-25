@@ -1,0 +1,17 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_alif2.U0.cpu_overheated",
+        "tb_alif2.U0.arrived",
+        "tb_alif2.U0.gas_tank_empty",
+        "tb_alif1.U0.sel_b2",
+        "tb_alif2.U0.shut_off_computer",
+        "tb_alif2.U0.keep_driving"
+    ],
+    
+    "offset": 5,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 45
+}

@@ -1,0 +1,6 @@
+VCD info: dumpfile waveform.vcd opened for output.
+At time   0ns: in = 0x08(00001000),  num = 0x4, out_lsl = 0x80(10000000), out_rsl = 0x00(00000000), out_lsa = 0x80(10000000), out_rsa = 0x00(00000000)
+At time  10ns: in = 0xf4(11110100),  num = 0x4, out_lsl = 0x40(01000000), out_rsl = 0x0f(00001111), out_lsa = 0x40(01000000), out_rsa = 0xff(11111111)
+At time  20ns: in = 0xd7(11010111),  num = 0x3, out_lsl = 0xb8(10111000), out_rsl = 0x1a(00011010), out_lsa = 0xb8(10111000), out_rsa = 0xfa(11111010)
+At time  30ns: in = 0x96(10010110),  num = 0x5, out_lsl = 0xc0(11000000), out_rsl = 0x04(00000100), out_lsa = 0xc0(11000000), out_rsa = 0xfc(11111100)
+At time  40ns: in = 0x18(00011000),  num = 0x2, out_lsl = 0x60(01100000), out_rsl = 0x06(00000110), out_lsa = 0x60(01100000), out_rsa = 0x06(00000110)

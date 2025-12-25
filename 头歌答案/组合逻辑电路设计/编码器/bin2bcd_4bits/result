@@ -1,0 +1,18 @@
+VCD info: dumpfile waveform.vcd opened for output.
+At time   0ns: EN = 0, bin = 0000, bcd = 00000, valid = 0
+At time  10ns: EN = 1, bin = 0000, bcd = 00000, valid = 1
+At time  15ns: EN = 1, bin = 0001, bcd = 00001, valid = 1
+At time  20ns: EN = 1, bin = 0010, bcd = 00010, valid = 1
+At time  25ns: EN = 1, bin = 0011, bcd = 00011, valid = 1
+At time  30ns: EN = 1, bin = 0100, bcd = 00100, valid = 1
+At time  35ns: EN = 1, bin = 0101, bcd = 00101, valid = 1
+At time  40ns: EN = 1, bin = 0110, bcd = 00110, valid = 1
+At time  45ns: EN = 1, bin = 0111, bcd = 00111, valid = 1
+At time  50ns: EN = 1, bin = 1000, bcd = 01000, valid = 1
+At time  55ns: EN = 1, bin = 1001, bcd = 01001, valid = 1
+At time  60ns: EN = 1, bin = 1010, bcd = 10000, valid = 1
+At time  65ns: EN = 1, bin = 1011, bcd = 10001, valid = 1
+At time  70ns: EN = 1, bin = 1100, bcd = 10010, valid = 1
+At time  75ns: EN = 1, bin = 1101, bcd = 10011, valid = 1
+At time  80ns: EN = 1, bin = 1110, bcd = 10100, valid = 1
+At time  85ns: EN = 1, bin = 1111, bcd = 10101, valid = 1

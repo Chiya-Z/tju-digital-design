@@ -1,0 +1,14 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_dff.U0.sys_clk",
+        "tb_dff.U0.D",
+        "tb_dff.U0.Q"
+    ],
+    
+    "offset": 0,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 150
+}

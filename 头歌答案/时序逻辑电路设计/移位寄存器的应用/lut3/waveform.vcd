@@ -1,0 +1,165 @@
+$date
+	Tue Jan 11 21:17:29 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module tb_lut3 $end
+$scope module U0 $end
+$var wire 1 ! sys_clk $end
+$upscope $end
+$upscope $end
+$scope module tb_lut3 $end
+$scope module U0 $end
+$var wire 1 " sys_rst_n $end
+$upscope $end
+$upscope $end
+$scope module tb_lut3 $end
+$scope module U0 $end
+$var wire 1 # en $end
+$upscope $end
+$upscope $end
+$scope module tb_lut3 $end
+$scope module U0 $end
+$var wire 1 $ S $end
+$upscope $end
+$upscope $end
+$scope module tb_lut3 $end
+$scope module U0 $end
+$var reg 8 % Q [7:0] $end
+$upscope $end
+$upscope $end
+$scope module tb_lut3 $end
+$scope module U0 $end
+$var wire 1 & A $end
+$upscope $end
+$upscope $end
+$scope module tb_lut3 $end
+$scope module U0 $end
+$var wire 1 ' B $end
+$upscope $end
+$upscope $end
+$scope module tb_lut3 $end
+$scope module U0 $end
+$var wire 1 ( C $end
+$upscope $end
+$upscope $end
+$scope module tb_lut3 $end
+$scope module U0 $end
+$var wire 1 ) Z $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x)
+0(
+0'
+0&
+bx %
+1$
+0#
+0"
+0!
+$end
+#5
+0)
+b0 %
+1!
+#10
+0!
+#15
+1!
+#20
+1#
+1"
+0!
+#25
+1)
+b1 %
+0$
+1!
+#30
+0!
+#35
+0)
+b10 %
+1!
+#40
+0!
+#45
+b100 %
+1$
+1!
+#50
+0!
+#55
+1)
+b1001 %
+1!
+#60
+0!
+#65
+b10011 %
+1!
+#70
+0!
+#75
+0$
+b100111 %
+1!
+#80
+0!
+#85
+0)
+b1001110 %
+1!
+#90
+0!
+#95
+0#
+b10011100 %
+1!
+#100
+0!
+#105
+1&
+1)
+1'
+1(
+1!
+#110
+0)
+0(
+0!
+#115
+0'
+0)
+1(
+1!
+#120
+1)
+0(
+0!
+#125
+0&
+1'
+1)
+1(
+1!
+#130
+0(
+0!
+#135
+0)
+0'
+1(
+1!
+#140
+0(
+0!
+#145
+1!

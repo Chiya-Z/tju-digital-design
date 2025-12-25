@@ -1,0 +1,64 @@
+{
+    "signal": [
+	["输入",
+        {
+            "name": "tb_sreg_rotator.U0.sys_clk",
+            "wave": "01010101010101010101010101.",
+            "data": []
+        },
+        {
+            "name": "tb_sreg_rotator.U0.sys_rst_n",
+            "wave": "0...1......................",
+            "data": []
+        },
+        {
+            "name": "tb_sreg_rotator.U0.load",
+            "wave": "0...10.....................",
+            "data": []
+        },
+        {
+            "name": "tb_sreg_rotator.U0.en[1:0]",
+            "wave": "=...=..........=.........=.",
+            "data": [
+                "0",
+                "1",
+                "2",
+                "3"
+            ]
+        },
+        {
+            "name": "tb_sreg_rotator.U0.D[7:0]",
+            "wave": "=..........................",
+            "data": [
+                "6D"
+            ]
+        },
+	],
+	["输出",
+        {
+            "name": "tb_sreg_rotator.U0.Q[7:0]",
+            "wave": "x....=.=.=.=.=.=.=.=.=.=.=.",
+            "data": [
+                "6D",
+                "B6",
+                "5B",
+                "AD",
+                "D6",
+                "6B",
+                "D6",
+                "AD",
+                "5B",
+                "B6",
+                "6D"
+            ]
+        }
+	]
+    ],
+    "config": {
+        "hscale": 1
+    },
+    "foot": {
+        "text": "Timing Diagram",
+        "tick": 0
+    }
+}

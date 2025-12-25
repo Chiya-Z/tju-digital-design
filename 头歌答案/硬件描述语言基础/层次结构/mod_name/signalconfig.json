@@ -1,0 +1,17 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_mod_name.U0.a",
+        "tb_mod_name.U0.b",
+        "tb_mod_name.U0.c",
+        "tb_mod_name.U0.d",
+        "tb_mod_name.U0.out1",
+        "tb_mod_name.U0.out2"
+    ],
+    
+    "offset": 5,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 85
+}

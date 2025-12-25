@@ -1,0 +1,15 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_gates4.U0.in[3:0]",
+        "tb_gates4.U0.out_and",
+        "tb_gates4.U0.out_or",
+	"tb_gates4.U0.out_xor"
+    ],
+    
+    "offset": 5,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 80
+}

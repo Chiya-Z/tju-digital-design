@@ -1,0 +1,24 @@
+VCD info: dumpfile waveform.vcd opened for output.
+At time   0ns: A = 01111000, B = 00000111, aluop = 0000, alu_res = 01111111, ZF = 0, SF = 0, OF = 0, CF = 0
+At time   5ns: A = 01111000, B = 00001000, aluop = 0000, alu_res = 10000000, ZF = 0, SF = 1, OF = 1, CF = 0
+At time  10ns: A = 10001000, B = 11111000, aluop = 0000, alu_res = 10000000, ZF = 0, SF = 1, OF = 0, CF = 1
+At time  15ns: A = 10001000, B = 11110111, aluop = 0000, alu_res = 01111111, ZF = 0, SF = 0, OF = 1, CF = 1
+At time  20ns: A = 11111010, B = 00000101, aluop = 0000, alu_res = 11111111, ZF = 0, SF = 1, OF = 0, CF = 0
+At time  25ns: A = 11111010, B = 00000110, aluop = 0000, alu_res = 00000000, ZF = 1, SF = 0, OF = 0, CF = 1
+At time  30ns: A = 10001000, B = 00001000, aluop = 0001, alu_res = 10000000, ZF = 0, SF = 1, OF = 0, CF = 0
+At time  35ns: A = 10001000, B = 00001001, aluop = 0001, alu_res = 01111111, ZF = 0, SF = 0, OF = 1, CF = 0
+At time  40ns: A = 10001000, B = 10001000, aluop = 0001, alu_res = 00000000, ZF = 1, SF = 0, OF = 0, CF = 0
+At time  45ns: A = 11111010, B = 11111001, aluop = 0001, alu_res = 00000001, ZF = 0, SF = 0, OF = 0, CF = 0
+At time  50ns: A = 11111010, B = 11111011, aluop = 0001, alu_res = 11111111, ZF = 0, SF = 1, OF = 0, CF = 1
+At time  55ns: A = 11111010, B = 11111010, aluop = 0001, alu_res = 00000000, ZF = 1, SF = 0, OF = 0, CF = 0
+At time  60ns: A = 01111000, B = 00000111, aluop = 0010, alu_res = 00000000, ZF = 1, SF = 0, OF = 0, CF = 0
+At time  65ns: A = 01111000, B = 00001000, aluop = 0011, alu_res = 01111000, ZF = 0, SF = 0, OF = 0, CF = 0
+At time  70ns: A = 10001000, B = 11111000, aluop = 0100, alu_res = 01110111, ZF = 0, SF = 0, OF = 0, CF = 0
+At time  75ns: A = 10001000, B = 11110111, aluop = 0101, alu_res = 01111111, ZF = 0, SF = 0, OF = 0, CF = 0
+At time  80ns: A = 01111000, B = 00000011, aluop = 0110, alu_res = 11000000, ZF = 0, SF = 0, OF = 0, CF = 0
+At time  85ns: A = 01111000, B = 00000011, aluop = 0111, alu_res = 00001111, ZF = 0, SF = 0, OF = 0, CF = 0
+At time  90ns: A = 10001000, B = 00000011, aluop = 1000, alu_res = 11110001, ZF = 0, SF = 0, OF = 0, CF = 0
+At time  95ns: A = 01111000, B = 00001000, aluop = 1001, alu_res = 00000000, ZF = 1, SF = 0, OF = 0, CF = 0
+At time 100ns: A = 10001000, B = 11111000, aluop = 1001, alu_res = 00000001, ZF = 0, SF = 0, OF = 0, CF = 0
+At time 105ns: A = 11111010, B = 11111001, aluop = 1010, alu_res = 00000000, ZF = 1, SF = 0, OF = 0, CF = 0
+At time 110ns: A = 11111010, B = 11111011, aluop = 1010, alu_res = 00000001, ZF = 0, SF = 0, OF = 0, CF = 0

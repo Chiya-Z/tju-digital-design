@@ -1,0 +1,56 @@
+$date
+	Thu Feb  3 23:31:58 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module tb_cond_ternary $end
+$scope module U0 $end
+$var wire 8 ! a [7:0] $end
+$upscope $end
+$upscope $end
+$scope module tb_cond_ternary $end
+$scope module U0 $end
+$var wire 8 " b [7:0] $end
+$upscope $end
+$upscope $end
+$scope module tb_cond_ternary $end
+$scope module U0 $end
+$var wire 8 # c [7:0] $end
+$upscope $end
+$upscope $end
+$scope module tb_cond_ternary $end
+$scope module U0 $end
+$var wire 8 $ d [7:0] $end
+$upscope $end
+$upscope $end
+$scope module tb_cond_ternary $end
+$scope module U0 $end
+$var wire 8 % min [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1 %
+b100 $
+b11 #
+b10 "
+b1 !
+$end
+#10
+b10 %
+b10001 !
+#20
+b11 %
+b10010 "
+#30
+b100 %
+b10011 #
+#40
+b10001 %
+b10100 $
+#45

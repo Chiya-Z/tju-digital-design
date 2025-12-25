@@ -1,0 +1,51 @@
+$date
+	Sun Jan  9 15:24:14 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module tb_mul_8bits $end
+$scope module U0 $end
+$var wire 8 ! A [7:0] $end
+$upscope $end
+$upscope $end
+$scope module tb_mul_8bits $end
+$scope module U0 $end
+$var wire 8 " B [7:0] $end
+$upscope $end
+$upscope $end
+$scope module tb_mul_8bits $end
+$scope module U0 $end
+$var wire 1 # Signed $end
+$upscope $end
+$upscope $end
+$scope module tb_mul_8bits $end
+$scope module U0 $end
+$var wire 16 $ Prod [15:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1111 $
+0#
+b101 "
+b11 !
+$end
+#5
+1#
+#10
+b1111 $
+b11111011 "
+b11111101 !
+#15
+b1111111111110001 $
+b101 "
+#20
+b1111111111110001 $
+b11111101 "
+b101 !
+#25

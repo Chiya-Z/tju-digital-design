@@ -1,0 +1,25 @@
+{
+    "signal": [
+	["输入",
+        {
+            "name": "tb_wire1.U0.in",
+            "wave": "0.......10.10.101010",
+            "data": []
+        },
+	],
+	["输出",
+        {
+            "name": "tb_wire1.U0.out",
+            "wave": "0.......10.10.101010",
+            "data": []
+        }
+	]
+    ],
+    "config": {
+        "hscale": 1
+    },
+    "foot": {
+        "text": "Timing Diagram",
+        "tick": 0
+    }
+}

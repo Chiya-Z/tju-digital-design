@@ -1,0 +1,9 @@
+VCD info: dumpfile waveform.vcd opened for output.
+At time   0ns: A = 0, B = 0, Cin = 0, S = 0, Cout = 0
+At time   5ns: A = 0, B = 0, Cin = 1, S = 1, Cout = 0
+At time  10ns: A = 0, B = 1, Cin = 0, S = 1, Cout = 0
+At time  15ns: A = 0, B = 1, Cin = 1, S = 0, Cout = 1
+At time  20ns: A = 1, B = 0, Cin = 0, S = 1, Cout = 0
+At time  25ns: A = 1, B = 0, Cin = 1, S = 0, Cout = 1
+At time  30ns: A = 1, B = 1, Cin = 0, S = 0, Cout = 1
+At time  35ns: A = 1, B = 1, Cin = 1, S = 1, Cout = 1

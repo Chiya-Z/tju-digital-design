@@ -1,0 +1,15 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_compare.U0.a[7:0]",
+        "tb_compare.U0.b[7:0]",
+        "tb_compare.U0.flag[2:0]",
+	"tb_compare.U0.flag_s[2:0]"
+    ],
+    
+    "offset": 5,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 60
+}

@@ -1,0 +1,16 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_debouncing.U1.sys_clk",
+        "tb_debouncing.U1.sys_rst_n",
+        "tb_debouncing.U1.clk_flag",
+        "tb_debouncing.U1.i_btn",
+        "tb_debouncing.U1.o_btn"
+    ],
+    
+    "offset": 0,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 220
+}

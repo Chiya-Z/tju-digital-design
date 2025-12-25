@@ -1,0 +1,14 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_mod3.U0.clk",
+        "tb_mod3.U0.d",
+        "tb_mod3.U0.q"
+    ],
+    
+    "offset": 5,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 60
+}

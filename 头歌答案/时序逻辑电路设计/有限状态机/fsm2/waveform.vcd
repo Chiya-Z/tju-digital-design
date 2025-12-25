@@ -1,0 +1,95 @@
+$date
+	Fri Jan 14 16:10:49 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module tb_fsm2 $end
+$scope module U0 $end
+$var wire 1 ! sys_clk $end
+$upscope $end
+$upscope $end
+$scope module tb_fsm2 $end
+$scope module U0 $end
+$var wire 1 " sys_rst_n $end
+$upscope $end
+$upscope $end
+$scope module tb_fsm2 $end
+$scope module U0 $end
+$var wire 1 # j $end
+$upscope $end
+$upscope $end
+$scope module tb_fsm2 $end
+$scope module U0 $end
+$var wire 1 $ k $end
+$upscope $end
+$upscope $end
+$scope module tb_fsm2 $end
+$scope module U0 $end
+$var reg 1 % cstate $end
+$upscope $end
+$upscope $end
+$scope module tb_fsm2 $end
+$scope module U0 $end
+$var reg 1 & nstate $end
+$upscope $end
+$upscope $end
+$scope module tb_fsm2 $end
+$scope module U0 $end
+$var wire 1 ' out $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x'
+0&
+x%
+0$
+0#
+0"
+0!
+$end
+#5
+0'
+0%
+1!
+#10
+0!
+#15
+1!
+#20
+1"
+0!
+#25
+1&
+1#
+1!
+#30
+0!
+#35
+1'
+0#
+1%
+1!
+#40
+0!
+#45
+0&
+1#
+1$
+1!
+#50
+0!
+#55
+0'
+0#
+0%
+1!
+#60
+0!
+#65
+1!

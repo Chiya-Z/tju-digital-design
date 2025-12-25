@@ -1,0 +1,5 @@
+VCD info: dumpfile waveform.vcd opened for output.
+At time   0ns: sys_rst_n = 0, sin = 0, rd = 0, sout = 00000000
+At time  20ns: sys_rst_n = 1, sin = 0, rd = 0, sout = 00000000
+At time  35ns: sys_rst_n = 1, sin = 1, rd = 0, sout = 00000000
+At time  95ns: sys_rst_n = 1, sin = 0, rd = 1, sout = 00111111

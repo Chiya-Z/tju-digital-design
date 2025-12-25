@@ -1,0 +1,6 @@
+VCD info: dumpfile waveform.vcd opened for output.
+At time   0ns: A = 00000011, B = 00000101, Signed = 0, Prod = 0000000000001111
+At time   5ns: A = 00000011, B = 00000101, Signed = 1, Prod = 0000000000001111
+At time  10ns: A = 11111101, B = 11111011, Signed = 1, Prod = 0000000000001111
+At time  15ns: A = 11111101, B = 00000101, Signed = 1, Prod = 1111111111110001
+At time  20ns: A = 00000101, B = 11111101, Signed = 1, Prod = 1111111111110001

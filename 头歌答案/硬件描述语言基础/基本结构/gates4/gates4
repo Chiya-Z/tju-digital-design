@@ -1,0 +1,109 @@
+#! /usr/local/bin/vvp
+:ivl_version "11.0 (stable)" "(v11_0)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/usr/local/lib/ivl/system.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/lib/ivl/va_math.vpi";
+:vpi_module "/usr/local/lib/ivl/v2009.vpi";
+S_0x55f73978e4b0 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0x55f73979a8e0 .scope module, "tb_gates4" "tb_gates4" 3 3;
+ .timescale -9 -9;
+v0x55f7397b5680_0 .var/2s "i", 31 0;
+v0x55f7397b5780_0 .var "in", 3 0;
+v0x55f7397b5840_0 .net "out_and", 0 0, L_0x55f7397b5fb0;  1 drivers
+v0x55f7397b5910_0 .net "out_or", 0 0, L_0x55f7397b6670;  1 drivers
+v0x55f7397b59e0_0 .net "out_xor", 0 0, L_0x55f7397b6d80;  1 drivers
+S_0x55f73979aa70 .scope module, "U0" "gates4" 3 8, 4 1 0, S_0x55f73979a8e0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "in";
+    .port_info 1 /OUTPUT 1 "out_and";
+    .port_info 2 /OUTPUT 1 "out_or";
+    .port_info 3 /OUTPUT 1 "out_xor";
+L_0x55f7397b5c40 .functor AND 1, L_0x55f7397b5a80, L_0x55f7397b5ba0, C4<1>, C4<1>;
+L_0x55f7397b5e20 .functor AND 1, L_0x55f7397b5c40, L_0x55f7397b5d80, C4<1>, C4<1>;
+L_0x55f7397b5fb0 .functor AND 1, L_0x55f7397b5e20, L_0x55f7397b5ee0, C4<1>, C4<1>;
+L_0x55f7397b6290 .functor OR 1, L_0x55f7397b6110, L_0x55f7397b61b0, C4<0>, C4<0>;
+L_0x55f7397b6470 .functor OR 1, L_0x55f7397b6290, L_0x55f7397b63d0, C4<0>, C4<0>;
+L_0x55f7397b6670 .functor OR 1, L_0x55f7397b6470, L_0x55f7397b6580, C4<0>, C4<0>;
+L_0x55f7397b69b0 .functor XOR 1, L_0x55f7397b6810, L_0x55f7397b68b0, C4<0>, C4<0>;
+L_0x55f7397b6b10 .functor XOR 1, L_0x55f7397b69b0, L_0x55f7397b6a70, C4<0>, C4<0>;
+L_0x55f7397b6d80 .functor XOR 1, L_0x55f7397b6b10, L_0x55f7397b6c70, C4<0>, C4<0>;
+v0x55f73979ac00_0 .net *"_ivl_1", 0 0, L_0x55f7397b5a80;  1 drivers
+v0x55f7397b43d0_0 .net *"_ivl_11", 0 0, L_0x55f7397b5ee0;  1 drivers
+v0x55f7397b44b0_0 .net *"_ivl_15", 0 0, L_0x55f7397b6110;  1 drivers
+v0x55f7397b4570_0 .net *"_ivl_17", 0 0, L_0x55f7397b61b0;  1 drivers
+v0x55f7397b4650_0 .net *"_ivl_18", 0 0, L_0x55f7397b6290;  1 drivers
+v0x55f7397b4780_0 .net *"_ivl_21", 0 0, L_0x55f7397b63d0;  1 drivers
+v0x55f7397b4860_0 .net *"_ivl_22", 0 0, L_0x55f7397b6470;  1 drivers
+v0x55f7397b4940_0 .net *"_ivl_25", 0 0, L_0x55f7397b6580;  1 drivers
+v0x55f7397b4a20_0 .net *"_ivl_29", 0 0, L_0x55f7397b6810;  1 drivers
+v0x55f7397b4b00_0 .net *"_ivl_3", 0 0, L_0x55f7397b5ba0;  1 drivers
+v0x55f7397b4be0_0 .net *"_ivl_31", 0 0, L_0x55f7397b68b0;  1 drivers
+v0x55f7397b4cc0_0 .net *"_ivl_32", 0 0, L_0x55f7397b69b0;  1 drivers
+v0x55f7397b4da0_0 .net *"_ivl_35", 0 0, L_0x55f7397b6a70;  1 drivers
+v0x55f7397b4e80_0 .net *"_ivl_36", 0 0, L_0x55f7397b6b10;  1 drivers
+v0x55f7397b4f60_0 .net *"_ivl_39", 0 0, L_0x55f7397b6c70;  1 drivers
+v0x55f7397b5040_0 .net *"_ivl_4", 0 0, L_0x55f7397b5c40;  1 drivers
+v0x55f7397b5120_0 .net *"_ivl_7", 0 0, L_0x55f7397b5d80;  1 drivers
+v0x55f7397b5200_0 .net *"_ivl_8", 0 0, L_0x55f7397b5e20;  1 drivers
+v0x55f7397b52e0_0 .net "in", 3 0, v0x55f7397b5780_0;  1 drivers
+v0x55f7397b53c0_0 .net "out_and", 0 0, L_0x55f7397b5fb0;  alias, 1 drivers
+v0x55f7397b5480_0 .net "out_or", 0 0, L_0x55f7397b6670;  alias, 1 drivers
+v0x55f7397b5540_0 .net "out_xor", 0 0, L_0x55f7397b6d80;  alias, 1 drivers
+L_0x55f7397b5a80 .part v0x55f7397b5780_0, 3, 1;
+L_0x55f7397b5ba0 .part v0x55f7397b5780_0, 2, 1;
+L_0x55f7397b5d80 .part v0x55f7397b5780_0, 1, 1;
+L_0x55f7397b5ee0 .part v0x55f7397b5780_0, 0, 1;
+L_0x55f7397b6110 .part v0x55f7397b5780_0, 3, 1;
+L_0x55f7397b61b0 .part v0x55f7397b5780_0, 2, 1;
+L_0x55f7397b63d0 .part v0x55f7397b5780_0, 1, 1;
+L_0x55f7397b6580 .part v0x55f7397b5780_0, 0, 1;
+L_0x55f7397b6810 .part v0x55f7397b5780_0, 3, 1;
+L_0x55f7397b68b0 .part v0x55f7397b5780_0, 2, 1;
+L_0x55f7397b6a70 .part v0x55f7397b5780_0, 1, 1;
+L_0x55f7397b6c70 .part v0x55f7397b5780_0, 0, 1;
+    .scope S_0x55f73979a8e0;
+T_0 ;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0x55f7397b5680_0, 0, 32;
+T_0.0 ;
+    %load/vec4 v0x55f7397b5680_0;
+    %cmpi/s 16, 0, 32;
+    %jmp/0xz T_0.1, 5;
+    %load/vec4 v0x55f7397b5680_0;
+    %pad/s 4;
+    %store/vec4 v0x55f7397b5780_0, 0, 4;
+    %delay 5, 0;
+    ; show_stmt_assign_vector: Get l-value for compressed += operand
+    %load/vec4 v0x55f7397b5680_0;
+    %pushi/vec4 1, 0, 32;
+    %add;
+    %cast2;
+    %store/vec4 v0x55f7397b5680_0, 0, 32;
+    %jmp T_0.0;
+T_0.1 ;
+    %end;
+    .thread T_0;
+    .scope S_0x55f73979a8e0;
+T_1 ;
+    %vpi_call/w 3 22 "$timeformat", 32'sb11111111111111111111111111110111, 32'sb00000000000000000000000000000000, "ns", 32'sb00000000000000000000000000000101 {0 0 0};
+    %vpi_call/w 3 23 "$monitor", "At time %t: in = %b,  out_and = %b, out_or = %b, out_xor = %b", $time, v0x55f7397b5780_0, v0x55f7397b5840_0, v0x55f7397b5910_0, v0x55f7397b59e0_0 {0 0 0};
+    %end;
+    .thread T_1;
+    .scope S_0x55f73979a8e0;
+T_2 ;
+    %vpi_call/w 3 29 "$dumpfile", "waveform.vcd" {0 0 0};
+    %vpi_call/w 3 30 "$dumpvars", 32'sb00000000000000000000000000000001, S_0x55f73979aa70 {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "-";
+    "tb_gates4.v";
+    "gates4.v";

@@ -1,0 +1,50 @@
+{
+    "signal": [
+	["输入",
+        {
+            "name": "tb_wire4.U0.a",
+            "wave": "0......1......0.",
+            "data": []
+        },
+        {
+            "name": "tb_wire4.U0.b",
+            "wave": "0..1...0..1.....",
+            "data": []
+        },
+        {
+            "name": "tb_wire4.U0.c",
+            "wave": "01.01..01.01..0.",
+            "data": []
+        },
+	],
+	["输出",
+        {
+            "name": "tb_wire4.U0.w",
+            "wave": "0......1......0.",
+            "data": []
+        },
+        {
+            "name": "tb_wire4.U0.x",
+            "wave": "0..1...0..1.....",
+            "data": []
+        },
+        {
+            "name": "tb_wire4.U0.y",
+            "wave": "0..1...0..1.....",
+            "data": []
+        },
+        {
+            "name": "tb_wire4.U0.z",
+            "wave": "01.01..01.01..0.",
+            "data": []
+        }
+	]
+    ],
+    "config": {
+        "hscale": 1
+    },
+    "foot": {
+        "text": "Timing Diagram",
+        "tick": 0
+    }
+}

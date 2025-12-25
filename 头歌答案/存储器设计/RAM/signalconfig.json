@@ -1,0 +1,16 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_ram.U0.sys_clk",
+        "tb_ram.U0.we",
+        "tb_ram.U0.addr[2:0]",
+        "tb_ram.U0.din[15:0]",
+        "tb_ram.U0.dout[15:0]"
+    ],
+    
+    "offset": 0,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 160
+}

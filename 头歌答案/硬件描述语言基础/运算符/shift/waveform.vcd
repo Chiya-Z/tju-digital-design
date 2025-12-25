@@ -1,0 +1,57 @@
+$date
+	Thu Feb  3 23:37:34 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module tb_shift $end
+$scope module U0 $end
+$var wire 8 ! in [7:0] $end
+$var wire 3 " num [2:0] $end
+$var wire 8 # out_rsl [7:0] $end
+$var wire 8 $ out_rsa [7:0] $end
+$var wire 8 % out_lsl [7:0] $end
+$var wire 8 & out_lsa [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b10000000 &
+b10000000 %
+b0 $
+b0 #
+b100 "
+b1000 !
+$end
+#10
+b1000000 %
+b1111 #
+b1000000 &
+b11111111 $
+b11110100 !
+#20
+b11 "
+b10111000 %
+b11010 #
+b10111000 &
+b11111010 $
+b11010111 !
+#30
+b101 "
+b11000000 %
+b100 #
+b11000000 &
+b11111100 $
+b10010110 !
+#40
+b10 "
+b1100000 %
+b110 #
+b1100000 &
+b110 $
+b11000 !
+#45

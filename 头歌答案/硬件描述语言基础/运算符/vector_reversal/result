@@ -1,0 +1,9 @@
+VCD info: dumpfile waveform.vcd opened for output.
+At time   0ns: in = 00(00000000),  out= 00(00000000)
+At time   5ns: in = 01(00000001),  out= 80(10000000)
+At time  10ns: in = 02(00000010),  out= 40(01000000)
+At time  15ns: in = 04(00000100),  out= 20(00100000)
+At time  20ns: in = 08(00001000),  out= 10(00010000)
+At time  25ns: in = c0(11000000),  out= 03(00000011)
+At time  30ns: in = e0(11100000),  out= 07(00000111)
+At time  35ns: in = f0(11110000),  out= 0f(00001111)

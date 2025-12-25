@@ -1,0 +1,8 @@
+VCD info: dumpfile waveform.vcd opened for output.
+At time   0ns: d = 00010111, sel = 0x0(00), q = 00010111
+At time  10ns: d = 00111010, sel = 0x1(01), q = 00010111
+At time  15ns: d = 00111010, sel = 0x1(01), q = 00111010
+At time  20ns: d = 01010110, sel = 0x2(10), q = 00010111
+At time  25ns: d = 01010110, sel = 0x2(10), q = 00111010
+At time  30ns: d = 00100011, sel = 0x3(11), q = 00010111
+At time  35ns: d = 00100011, sel = 0x3(11), q = 00111010

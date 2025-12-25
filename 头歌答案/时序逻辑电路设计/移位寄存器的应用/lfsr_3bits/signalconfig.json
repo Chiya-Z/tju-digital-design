@@ -1,0 +1,16 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_lfsr_3bits.U0.sys_clk",
+        "tb_lfsr_3bits.U0.sys_rst_n",
+        "tb_lfsr_3bits.U0.L",
+        "tb_lfsr_3bits.U0.R[2:0]",
+        "tb_lfsr_3bits.U0.prNUM[2:0]"
+    ],
+    
+    "offset": 0,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 110
+}

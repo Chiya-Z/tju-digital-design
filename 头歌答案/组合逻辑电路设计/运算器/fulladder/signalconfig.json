@@ -1,0 +1,16 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_fulladder.U0.A",
+        "tb_fulladder.U0.B",
+        "tb_fulladder.U0.Cin",
+        "tb_fulladder.U0.S",
+        "tb_fulladder.U0.Cout"
+    ],
+    
+    "offset": 0,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 45
+}

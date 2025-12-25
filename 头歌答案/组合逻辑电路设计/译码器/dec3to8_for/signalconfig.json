@@ -1,0 +1,14 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_dec3to8.U0.en",
+        "tb_dec3to8.U0.Din[2:0]",
+        "tb_dec3to8.U0.Y[7:0]"
+    ],
+    
+    "offset": 5,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 55
+}

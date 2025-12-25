@@ -1,0 +1,17 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_alif1.U0.a",
+        "tb_alif1.U0.b",
+        "tb_alif1.U0.sel_b1",
+        "tb_alif1.U0.sel_b2",
+        "tb_alif1.U0.out_assign",
+        "tb_alif1.U0.out_alwaysblock"
+    ],
+    
+    "offset": 5,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 40
+}

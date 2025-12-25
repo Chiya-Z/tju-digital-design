@@ -1,0 +1,17 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_fsm3.U0.sys_clk",
+        "tb_fsm3.U0.sys_rst_n",
+        "tb_fsm3.U0.in",
+        "tb_fsm3.U0.cstate[1:0]",
+        "tb_fsm3.U0.nstate[1:0]",
+        "tb_fsm3.U0.out"
+    ],
+    
+    "offset": 0,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 110
+}

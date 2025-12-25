@@ -1,0 +1,58 @@
+{
+    "signal": [
+	["输入",
+        {
+            "name": "tb_cond_ternary.U0.a[7:0]",
+            "wave": "=.=......",
+            "data": [
+                "1",
+                "11"
+            ]
+        },
+        {
+            "name": "tb_cond_ternary.U0.b[7:0]",
+            "wave": "=...=....",
+            "data": [
+                "2",
+                "12"
+            ]
+        },
+        {
+            "name": "tb_cond_ternary.U0.c[7:0]",
+            "wave": "=.....=..",
+            "data": [
+                "3",
+                "13"
+            ]
+        },
+        {
+            "name": "tb_cond_ternary.U0.d[7:0]",
+            "wave": "=.......=",
+            "data": [
+                "4",
+                "14"
+            ]
+        },
+	],
+	["输出",
+        {
+            "name": "tb_cond_ternary.U0.min[7:0]",
+            "wave": "=.=.=.=.=",
+            "data": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "11"
+            ]
+        }
+	]
+    ],
+    "config": {
+        "hscale": 1
+    },
+    "foot": {
+        "text": "Timing Diagram",
+        "tick": 0
+    }
+}

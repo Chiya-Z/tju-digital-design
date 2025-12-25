@@ -1,0 +1,15 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_mod_shift.U0.clk",
+        "tb_mod_shift.U0.d[7:0]",
+        "tb_mod_shift.U0.sel[1:0]",
+        "tb_mod_shift.U0.q[7:0]"
+    ],
+    
+    "offset": 5,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 40
+}

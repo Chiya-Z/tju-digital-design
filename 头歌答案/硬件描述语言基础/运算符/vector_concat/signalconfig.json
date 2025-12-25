@@ -1,0 +1,21 @@
+{
+    "signal": {
+    },
+    "filter": [
+    "tb_vector_concat.U0.a[4:0]",
+	"tb_vector_concat.U0.b[4:0]",
+	"tb_vector_concat.U0.c[4:0]",
+	"tb_vector_concat.U0.d[4:0]",
+	"tb_vector_concat.U0.e[4:0]",
+    "tb_vector_concat.U0.f[4:0]",
+    "tb_vector_concat.U0.w[7:0]",
+    "tb_vector_concat.U0.x[7:0]",
+    "tb_vector_concat.U0.y[7:0]",
+    "tb_vector_concat.U0.z[7:0]"
+    ],
+    
+    "offset": 5,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 100
+}

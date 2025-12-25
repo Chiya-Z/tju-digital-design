@@ -1,0 +1,15 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_mul_8bits.U0.A[7:0]",
+        "tb_mul_8bits.U0.B[7:0]",
+        "tb_mul_8bits.U0.Signed",
+        "tb_mul_8bits.U0.Prod[15:0]"
+    ],
+    
+    "offset": 0,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 25
+}

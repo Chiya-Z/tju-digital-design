@@ -1,0 +1,11 @@
+VCD info: dumpfile waveform.vcd opened for output.
+At time   0ns: sys_rst_n = 0, i_btn = 0, posedge_flag = x, negedge_flag = x
+At time   5ns: sys_rst_n = 0, i_btn = 0, posedge_flag = 0, negedge_flag = 0
+At time  20ns: sys_rst_n = 1, i_btn = 0, posedge_flag = 0, negedge_flag = 0
+At time  35ns: sys_rst_n = 1, i_btn = 1, posedge_flag = 0, negedge_flag = 0
+At time  45ns: sys_rst_n = 1, i_btn = 1, posedge_flag = 1, negedge_flag = 0
+At time  55ns: sys_rst_n = 1, i_btn = 1, posedge_flag = 0, negedge_flag = 0
+At time  95ns: sys_rst_n = 1, i_btn = 0, posedge_flag = 0, negedge_flag = 0
+At time 105ns: sys_rst_n = 1, i_btn = 1, posedge_flag = 0, negedge_flag = 1
+At time 115ns: sys_rst_n = 1, i_btn = 1, posedge_flag = 1, negedge_flag = 0
+At time 125ns: sys_rst_n = 1, i_btn = 1, posedge_flag = 0, negedge_flag = 0

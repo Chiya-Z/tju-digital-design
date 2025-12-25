@@ -1,0 +1,53 @@
+{
+    "signal": [
+	["输入",
+        {
+            "name": "tb_lfsr_3bits.U0.sys_clk",
+            "wave": "0101010101010101010101.",
+            "data": []
+        },
+        {
+            "name": "tb_lfsr_3bits.U0.sys_rst_n",
+            "wave": "0...1..................",
+            "data": []
+        },
+        {
+            "name": "tb_lfsr_3bits.U0.L",
+            "wave": "0...10.................",
+            "data": []
+        },
+        {
+            "name": "tb_lfsr_3bits.U0.R[2:0]",
+            "wave": "=......................",
+            "data": [
+                "1"
+            ]
+        },
+	],
+	["输出",
+        {
+            "name": "tb_lfsr_3bits.U0.prNUM[2:0]",
+            "wave": "x=...=.=.=.=.=.=.=.=.=.",
+            "data": [
+                "0",
+                "1",
+                "2",
+                "4",
+                "5",
+                "7",
+                "3",
+                "6",
+                "1",
+                "2"
+            ]
+        }
+	]
+    ],
+    "config": {
+        "hscale": 1
+    },
+    "foot": {
+        "text": "Timing Diagram",
+        "tick": 0
+    }
+}

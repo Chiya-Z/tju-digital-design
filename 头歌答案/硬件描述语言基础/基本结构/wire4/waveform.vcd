@@ -1,0 +1,93 @@
+$date
+	Tue Dec 14 17:19:42 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module tb_wire4 $end
+$scope module U0 $end
+$var wire 1 ! a $end
+$upscope $end
+$upscope $end
+$scope module tb_wire4 $end
+$scope module U0 $end
+$var wire 1 " b $end
+$upscope $end
+$upscope $end
+$scope module tb_wire4 $end
+$scope module U0 $end
+$var wire 1 # c $end
+$upscope $end
+$upscope $end
+$scope module tb_wire4 $end
+$scope module U0 $end
+$var wire 1 $ w $end
+$upscope $end
+$upscope $end
+$scope module tb_wire4 $end
+$scope module U0 $end
+$var wire 1 % x $end
+$upscope $end
+$upscope $end
+$scope module tb_wire4 $end
+$scope module U0 $end
+$var wire 1 & y $end
+$upscope $end
+$upscope $end
+$scope module tb_wire4 $end
+$scope module U0 $end
+$var wire 1 ' z $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0'
+0&
+0%
+0$
+0#
+0"
+0!
+$end
+#5
+1'
+1#
+#15
+1%
+1&
+1"
+0'
+0#
+#20
+1'
+1#
+#35
+1$
+1!
+0%
+0&
+0"
+0'
+0#
+#40
+1'
+1#
+#50
+1%
+1&
+1"
+0'
+0#
+#55
+1'
+1#
+#70
+0$
+0!
+0'
+0#
+#75

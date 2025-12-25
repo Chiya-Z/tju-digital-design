@@ -1,0 +1,15 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_dualedge.U0.sys_clk",
+        "tb_dualedge.U0.sys_rst_n",
+        "tb_dualedge.U0.D",
+        "tb_dualedge.U0.Q"
+    ],
+    
+    "offset": 0,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 100
+}

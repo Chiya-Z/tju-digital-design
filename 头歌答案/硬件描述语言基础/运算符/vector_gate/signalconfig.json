@@ -1,0 +1,16 @@
+{
+    "signal": {
+    },
+    "filter": [
+    "tb_vector_gate.U0.a[2:0]",
+	"tb_vector_gate.U0.b[2:0]",
+	"tb_vector_gate.U0.out_or_bitwise[2:0]",
+	"tb_vector_gate.U0.out_or_logical",
+	"tb_vector_gate.U0.out_not[5:0]"
+    ],
+    
+    "offset": 5,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 80
+}

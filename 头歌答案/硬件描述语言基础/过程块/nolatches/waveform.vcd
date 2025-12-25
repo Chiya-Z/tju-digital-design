@@ -1,0 +1,61 @@
+$date
+	Thu Dec 16 22:03:47 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module tb_nolatches $end
+$scope module U0 $end
+$var wire 16 ! scancode [15:0] $end
+$upscope $end
+$upscope $end
+$scope module tb_nolatches $end
+$scope module U0 $end
+$var reg 1 " left $end
+$upscope $end
+$upscope $end
+$scope module tb_nolatches $end
+$scope module U0 $end
+$var reg 1 # down $end
+$upscope $end
+$upscope $end
+$scope module tb_nolatches $end
+$scope module U0 $end
+$var reg 1 $ right $end
+$upscope $end
+$upscope $end
+$scope module tb_nolatches $end
+$scope module U0 $end
+$var reg 1 % up $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0%
+0$
+0#
+1"
+b1110000001101011 !
+$end
+#5
+1#
+0"
+b1110000001110010 !
+#10
+1$
+0#
+b1110000001110100 !
+#15
+1%
+0$
+b1110000001110101 !
+#20
+0%
+b1110000001101000 !
+#25
+b1101010000000110 !
+#30

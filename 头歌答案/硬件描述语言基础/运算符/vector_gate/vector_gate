@@ -1,0 +1,110 @@
+#! /usr/local/bin/vvp
+:ivl_version "11.0 (stable)" "(v11_0)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/usr/local/lib/ivl/system.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/lib/ivl/va_math.vpi";
+:vpi_module "/usr/local/lib/ivl/v2009.vpi";
+S_0x560ec7628e60 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0x560ec75fdda0 .scope module, "tb_vector_gate" "tb_vector_gate" 3 3;
+ .timescale -9 -9;
+v0x560ec76502d0_0 .var "a", 2 0;
+v0x560ec76503b0_0 .var "b", 2 0;
+v0x560ec7650450_0 .var/2s "i", 31 0;
+v0x560ec7650520_0 .net "out_not", 5 0, L_0x560ec7650de0;  1 drivers
+v0x560ec7650610_0 .net "out_or_bitwise", 2 0, L_0x560ec76271a0;  1 drivers
+v0x560ec76506b0_0 .net "out_or_logical", 0 0, L_0x560ec7650a50;  1 drivers
+S_0x560ec75fdf30 .scope module, "U0" "vector_gate" 3 10, 4 1 0, S_0x560ec75fdda0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 3 "a";
+    .port_info 1 /INPUT 3 "b";
+    .port_info 2 /OUTPUT 3 "out_or_bitwise";
+    .port_info 3 /OUTPUT 1 "out_or_logical";
+    .port_info 4 /OUTPUT 6 "out_not";
+L_0x560ec76271a0 .functor OR 3, v0x560ec76502d0_0, v0x560ec76503b0_0, C4<000>, C4<000>;
+L_0x560ec7650a50 .functor OR 1, L_0x560ec7650870, L_0x560ec7650960, C4<0>, C4<0>;
+L_0x560ec7650bb0 .functor NOT 3, v0x560ec76503b0_0, C4<000>, C4<000>, C4<000>;
+L_0x560ec7650cb0 .functor NOT 3, v0x560ec76502d0_0, C4<000>, C4<000>, C4<000>;
+v0x560ec76273a0_0 .net *"_ivl_12", 2 0, L_0x560ec7650bb0;  1 drivers
+v0x560ec7627440_0 .net *"_ivl_14", 2 0, L_0x560ec7650cb0;  1 drivers
+L_0x7fe7acf6d018 .functor BUFT 1, C4<000>, C4<0>, C4<0>, C4<0>;
+v0x560ec764fa80_0 .net/2u *"_ivl_2", 2 0, L_0x7fe7acf6d018;  1 drivers
+v0x560ec764fb40_0 .net *"_ivl_4", 0 0, L_0x560ec7650870;  1 drivers
+L_0x7fe7acf6d060 .functor BUFT 1, C4<000>, C4<0>, C4<0>, C4<0>;
+v0x560ec764fc00_0 .net/2u *"_ivl_6", 2 0, L_0x7fe7acf6d060;  1 drivers
+v0x560ec764fd30_0 .net *"_ivl_8", 0 0, L_0x560ec7650960;  1 drivers
+v0x560ec764fdf0_0 .net "a", 2 0, v0x560ec76502d0_0;  1 drivers
+v0x560ec764fed0_0 .net "b", 2 0, v0x560ec76503b0_0;  1 drivers
+v0x560ec764ffb0_0 .net "out_not", 5 0, L_0x560ec7650de0;  alias, 1 drivers
+v0x560ec7650090_0 .net "out_or_bitwise", 2 0, L_0x560ec76271a0;  alias, 1 drivers
+v0x560ec7650170_0 .net "out_or_logical", 0 0, L_0x560ec7650a50;  alias, 1 drivers
+L_0x560ec7650870 .cmp/ne 3, v0x560ec76502d0_0, L_0x7fe7acf6d018;
+L_0x560ec7650960 .cmp/ne 3, v0x560ec76503b0_0, L_0x7fe7acf6d060;
+L_0x560ec7650de0 .concat [ 3 3 0 0], L_0x560ec7650cb0, L_0x560ec7650bb0;
+    .scope S_0x560ec75fdda0;
+T_0 ;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0x560ec7650450_0, 0, 32;
+T_0.0 ;
+    %load/vec4 v0x560ec7650450_0;
+    %cmpi/s 8, 0, 32;
+    %jmp/0xz T_0.1, 5;
+    %load/vec4 v0x560ec7650450_0;
+    %pad/s 3;
+    %store/vec4 v0x560ec76502d0_0, 0, 3;
+    %pushi/vec4 6, 0, 3;
+    %store/vec4 v0x560ec76503b0_0, 0, 3;
+    %delay 5, 0;
+    ; show_stmt_assign_vector: Get l-value for compressed += operand
+    %load/vec4 v0x560ec7650450_0;
+    %pushi/vec4 1, 0, 32;
+    %add;
+    %cast2;
+    %store/vec4 v0x560ec7650450_0, 0, 32;
+    %jmp T_0.0;
+T_0.1 ;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0x560ec7650450_0, 0, 32;
+T_0.2 ;
+    %load/vec4 v0x560ec7650450_0;
+    %cmpi/s 8, 0, 32;
+    %jmp/0xz T_0.3, 5;
+    %load/vec4 v0x560ec7650450_0;
+    %pad/s 3;
+    %store/vec4 v0x560ec76502d0_0, 0, 3;
+    %pushi/vec4 0, 0, 3;
+    %store/vec4 v0x560ec76503b0_0, 0, 3;
+    %delay 5, 0;
+    ; show_stmt_assign_vector: Get l-value for compressed += operand
+    %load/vec4 v0x560ec7650450_0;
+    %pushi/vec4 1, 0, 32;
+    %add;
+    %cast2;
+    %store/vec4 v0x560ec7650450_0, 0, 32;
+    %jmp T_0.2;
+T_0.3 ;
+    %end;
+    .thread T_0;
+    .scope S_0x560ec75fdda0;
+T_1 ;
+    %vpi_call/w 3 31 "$timeformat", 32'sb11111111111111111111111111110111, 32'sb00000000000000000000000000000000, "ns", 32'sb00000000000000000000000000000101 {0 0 0};
+    %vpi_call/w 3 32 "$monitor", "At time %t: a = %b,  b = %b, out_or_bitwise = %b, out_or_logical = %b, out_not = %b", $time, v0x560ec76502d0_0, v0x560ec76503b0_0, v0x560ec7650610_0, v0x560ec76506b0_0, v0x560ec7650520_0 {0 0 0};
+    %end;
+    .thread T_1;
+    .scope S_0x560ec75fdda0;
+T_2 ;
+    %vpi_call/w 3 38 "$dumpfile", "waveform.vcd" {0 0 0};
+    %vpi_call/w 3 39 "$dumpvars", 32'sb00000000000000000000000000000001, S_0x560ec75fdf30 {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "-";
+    "tb_vector_gate.v";
+    "vector_gate.v";

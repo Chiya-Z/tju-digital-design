@@ -1,0 +1,7 @@
+VCD info: dumpfile waveform.vcd opened for output.
+At time   0ns: scancode = 0xe06b, left = 1, down = 0, right = 0, up = 0
+At time   5ns: scancode = 0xe072, left = 0, down = 1, right = 0, up = 0
+At time  10ns: scancode = 0xe074, left = 0, down = 0, right = 1, up = 0
+At time  15ns: scancode = 0xe075, left = 0, down = 0, right = 0, up = 1
+At time  20ns: scancode = 0xe068, left = 0, down = 0, right = 0, up = 0
+At time  25ns: scancode = 0xd406, left = 0, down = 0, right = 0, up = 0

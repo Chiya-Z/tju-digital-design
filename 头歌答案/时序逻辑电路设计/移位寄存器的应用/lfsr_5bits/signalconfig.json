@@ -1,0 +1,15 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_lfsr_5bits.U0.sys_clk",
+        "tb_lfsr_5bits.U0.sys_rst_n",
+        "tb_lfsr_5bits.U0.Q_next[4:0]",
+        "tb_lfsr_5bits.U0.Q[4:0]"
+    ],
+    
+    "offset": 0,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 350
+}

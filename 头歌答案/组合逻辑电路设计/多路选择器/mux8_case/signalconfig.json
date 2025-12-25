@@ -1,0 +1,14 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_mux8.U0.D[7:0]",
+        "tb_mux8.U0.sel[2:0]",
+        "tb_mux8.U0.Y"
+    ],
+    
+    "offset": 5,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 45
+}

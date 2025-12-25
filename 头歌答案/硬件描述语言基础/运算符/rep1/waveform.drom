@@ -1,0 +1,37 @@
+{
+    "signal": [
+	["输入",
+        {
+            "name": "tb_rep1.U0.in[7:0]",
+            "wave": "=...=...=...=...=....",
+            "data": [
+                "2",
+                "7E",
+                "6B",
+                "A8",
+                "FC"
+            ]
+        },
+	],
+	["输出",
+        {
+            "name": "tb_rep1.U0.out[31:0]",
+            "wave": "=...=...=...=...=....",
+            "data": [
+                "2",
+                "7E",
+                "6B",
+                "FFFFFFA8",
+                "FFFFFFFC"
+            ]
+        }
+	]
+    ],
+    "config": {
+        "hscale": 1
+    },
+    "foot": {
+        "text": "Timing Diagram",
+        "tick": 0
+    }
+}

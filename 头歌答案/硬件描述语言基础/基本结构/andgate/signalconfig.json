@@ -1,0 +1,23 @@
+{
+    "signal": {
+        "tb_andgate.U0.a": {
+            "phase": 0
+        },
+        "tb_andgate.U0.b": {
+            "phase": 0
+        },
+        "tb_andgate.U0.out": {
+            "phase": 0
+        }
+    },
+    "filter": [
+        "tb_andgate.U0.a",
+        "tb_andgate.U0.b",
+        "tb_andgate.U0.out"
+    ],
+    
+    "offset": 5,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 80
+}

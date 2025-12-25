@@ -1,0 +1,13 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_popcount255.U0.in[254:0]",
+        "tb_popcount255.U0.out[7:0]"
+    ],
+    
+    "offset": 5,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 130
+}

@@ -1,0 +1,14 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_Kmap8.U0.cd_sel.c",
+        "tb_Kmap8.U0.cd_sel.d",
+        "tb_Kmap8.U0.cd_sel.mux_in[3:0]"
+    ],
+    
+    "offset": 0,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 85
+}

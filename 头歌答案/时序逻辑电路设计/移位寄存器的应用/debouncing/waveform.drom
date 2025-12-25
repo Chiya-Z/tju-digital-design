@@ -1,0 +1,40 @@
+{
+    "signal": [
+	["输入",
+        {
+            "name": "tb_debouncing.U1.sys_clk",
+            "wave": "010101010101010101010101010101010101010101010",
+            "data": []
+        },
+        {
+            "name": "tb_debouncing.U1.sys_rst_n",
+            "wave": "0...1........................................",
+            "data": []
+        },
+        {
+            "name": "tb_debouncing.U1.clk_flag",
+            "wave": "x0...........1.0.......1.0.......1.0.......1.",
+            "data": []
+        },
+        {
+            "name": "tb_debouncing.U1.i_btn",
+            "wave": "0....1.0.1...........0.1.....................",
+            "data": []
+        },
+	],
+	["输出",
+        {
+            "name": "tb_debouncing.U1.o_btn",
+            "wave": "x0.................................1.........",
+            "data": []
+        }
+	]
+    ],
+    "config": {
+        "hscale": 1
+    },
+    "foot": {
+        "text": "Timing Diagram",
+        "tick": 0
+    }
+}

@@ -1,0 +1,5 @@
+VCD info: dumpfile waveform.vcd opened for output.
+At time   0ns: in = 13e589a8,  out= a889e513
+At time  20ns: in = f207cb89,  out= 89cb07f2
+At time  40ns: in = b1f05663,  out= 6356f0b1
+At time  60ns: in = 00f3d304,  out= 04d3f300

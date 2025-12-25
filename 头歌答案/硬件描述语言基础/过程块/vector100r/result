@@ -1,0 +1,6 @@
+VCD info: dumpfile waveform.vcd opened for output.
+At time   0ns: in =                            1024, out =     618970019642690137449562112
+At time   5ns: in =                             255, out = 1262698840071087880397106708480
+At time  10ns: in =                              99, out =  980448511114021177720106385408
+At time  15ns: in =                            4567, out = 1166294259511738891489337409536
+At time  20ns: in =                            8899, out =  966908541934337330963397214208

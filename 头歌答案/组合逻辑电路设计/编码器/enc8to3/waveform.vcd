@@ -1,0 +1,66 @@
+$date
+	Fri Jan 28 21:59:08 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module tb_enc8to3 $end
+$scope module U0 $end
+$var wire 1 ! EN $end
+$upscope $end
+$upscope $end
+$scope module tb_enc8to3 $end
+$scope module U0 $end
+$var wire 8 " Din [7:0] $end
+$upscope $end
+$upscope $end
+$scope module tb_enc8to3 $end
+$scope module U0 $end
+$var reg 3 # Y [2:0] $end
+$upscope $end
+$upscope $end
+$scope module tb_enc8to3 $end
+$scope module U0 $end
+$var reg 1 $ valid $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0$
+b0 #
+b1 "
+0!
+$end
+#10
+1$
+1!
+#15
+b1 #
+b10 "
+#20
+b10 #
+b100 "
+#25
+b11 #
+b1000 "
+#30
+b100 #
+b10000 "
+#35
+b101 #
+b100000 "
+#40
+b110 #
+b1000000 "
+#45
+b111 #
+b10000000 "
+#50
+0$
+b0 #
+b0 "
+#55

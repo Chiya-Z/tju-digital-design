@@ -1,0 +1,16 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_vector.U0.inv[2:0]",
+        "tb_vector.U0.outv[2:0]",
+	"tb_vector.U0.o2",
+	"tb_vector.U0.o1",
+	"tb_vector.U0.o0"
+    ],
+    
+    "offset": 5,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 70
+}

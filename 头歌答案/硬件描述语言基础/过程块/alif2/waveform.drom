@@ -1,0 +1,40 @@
+{
+    "signal": [
+	["输入",
+        {
+            "name": "tb_alif2.U0.cpu_overheated",
+            "wave": "0...1.....",
+            "data": []
+        },
+        {
+            "name": "tb_alif2.U0.arrived",
+            "wave": "0.1.0.1...",
+            "data": []
+        },
+        {
+            "name": "tb_alif2.U0.gas_tank_empty",
+            "wave": "01010101..",
+            "data": []
+        },
+	],
+	["输出",
+        {
+            "name": "tb_alif2.U0.shut_off_computer",
+            "wave": "0...1.....",
+            "data": []
+        },
+        {
+            "name": "tb_alif2.U0.keep_driving",
+            "wave": "10..10....",
+            "data": []
+        }
+	]
+    ],
+    "config": {
+        "hscale": 1
+    },
+    "foot": {
+        "text": "Timing Diagram",
+        "tick": 0
+    }
+}

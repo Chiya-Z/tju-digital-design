@@ -1,0 +1,13 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_rom.U0.addr[2:0]",
+        "tb_rom.U0.dout[15:0]"
+    ],
+    
+    "offset": 0,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 80
+}

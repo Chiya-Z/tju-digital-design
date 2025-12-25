@@ -1,0 +1,16 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_nolatches.U0.scancode[15:0]",
+        "tb_nolatches.U0.left",
+        "tb_nolatches.U0.down",
+        "tb_nolatches.U0.right",
+        "tb_nolatches.U0.up"
+    ],
+    
+    "offset": 5,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 30
+}

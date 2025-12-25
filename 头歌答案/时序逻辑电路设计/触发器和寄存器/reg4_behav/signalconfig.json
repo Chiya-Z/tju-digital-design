@@ -1,0 +1,15 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_reg4.U0.sys_clk",
+        "tb_reg4.U0.sys_rst_n",
+        "tb_reg4.U0.D[3:0]",
+        "tb_reg4.U0.Q[3:0]"
+    ],
+    
+    "offset": 0,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 120
+}

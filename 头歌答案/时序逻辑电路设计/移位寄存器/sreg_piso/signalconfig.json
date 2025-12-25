@@ -1,0 +1,16 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_sreg_piso.U0.sys_clk",
+        "tb_sreg_piso.U0.sys_rst_n",
+        "tb_sreg_piso.U0.load",
+        "tb_sreg_piso.U0.D[7:0]",
+        "tb_sreg_piso.U0.sout"
+    ],
+    
+    "offset": 0,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 110
+}

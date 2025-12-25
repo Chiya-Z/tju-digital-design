@@ -1,0 +1,19 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_Lemmings1.U0.sys_clk",
+        "tb_Lemmings1.U0.sys_rst_n",
+        "tb_Lemmings1.U0.bump_left",
+        "tb_Lemmings1.U0.bump_right",
+        "tb_Lemmings1.U0.cstate",
+        "tb_Lemmings1.U0.nstate",
+        "tb_Lemmings1.U0.walk_left",
+        "tb_Lemmings1.U0.walk_right"
+    ],
+    
+    "offset": 0,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 80
+}

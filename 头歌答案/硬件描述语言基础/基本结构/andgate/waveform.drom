@@ -1,0 +1,33 @@
+{
+    "signal": [
+	["输入",
+        {
+            "name": "tb_andgate.U0.a",
+            "wave": "0.........1......",
+            "data": [],
+            "phase": 0
+        },
+        {
+            "name": "tb_andgate.U0.b",
+            "wave": "0.....1...0...1..",
+            "data": [],
+            "phase": 0
+        },
+	],
+	["输出",
+        {
+            "name": "tb_andgate.U0.out",
+            "wave": "0.............1..",
+            "data": [],
+            "phase": 0
+        }
+	]
+    ],
+    "config": {
+        "hscale": 1
+    },
+    "foot": {
+        "text": "Timing Diagram",
+        "tick": 0
+    }
+}

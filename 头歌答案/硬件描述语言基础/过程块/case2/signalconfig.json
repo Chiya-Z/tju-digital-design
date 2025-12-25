@@ -1,0 +1,13 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_case2.U0.in[3:0]",
+        "tb_case2.U0.pos[1:0]"
+    ],
+    
+    "offset": 5,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 85
+}

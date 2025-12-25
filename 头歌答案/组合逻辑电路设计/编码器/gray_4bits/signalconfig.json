@@ -1,0 +1,16 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_gray_4bits.U0.EN",
+        "tb_gray_4bits.U0.gray_n",
+        "tb_gray_4bits.U0.Din[3:0]",
+        "tb_gray_4bits.U0.Dout[3:0]",
+        "tb_gray_4bits.U0.valid"
+    ],
+    
+    "offset": 0,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 180
+}

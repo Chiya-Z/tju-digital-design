@@ -1,0 +1,15 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_prio_enc8to3.U0.EN",
+        "tb_prio_enc8to3.U0.Din[7:0]",
+        "tb_prio_enc8to3.U0.Y[2:0]",
+        "tb_prio_enc8to3.U0.valid"
+    ],
+    
+    "offset": 0,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 55
+}

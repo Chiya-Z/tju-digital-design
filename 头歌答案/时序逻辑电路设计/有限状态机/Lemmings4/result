@@ -1,0 +1,15 @@
+VCD info: dumpfile waveform.vcd opened for output.
+At time   0ns: sys_rst_n = 0, bump_left = 0, bump_right = 0, ground = 1, dig = 0, cstate = xxx, nstate = 000, walk_left = x, walk_right = x, aaah = x, digging = x
+At time   5ns: sys_rst_n = 0, bump_left = 0, bump_right = 0, ground = 1, dig = 0, cstate = 000, nstate = 000, walk_left = 1, walk_right = 0, aaah = 0, digging = 0
+At time  20ns: sys_rst_n = 1, bump_left = 0, bump_right = 0, ground = 1, dig = 0, cstate = 000, nstate = 000, walk_left = 1, walk_right = 0, aaah = 0, digging = 0
+At time  25ns: sys_rst_n = 1, bump_left = 0, bump_right = 0, ground = 1, dig = 1, cstate = 000, nstate = 001, walk_left = 1, walk_right = 0, aaah = 0, digging = 0
+At time  35ns: sys_rst_n = 1, bump_left = 0, bump_right = 0, ground = 0, dig = 1, cstate = 001, nstate = 010, walk_left = 0, walk_right = 0, aaah = 0, digging = 1
+At time  45ns: sys_rst_n = 1, bump_left = 0, bump_right = 0, ground = 1, dig = 0, cstate = 010, nstate = 000, walk_left = 0, walk_right = 0, aaah = 1, digging = 0
+At time  55ns: sys_rst_n = 1, bump_left = 1, bump_right = 0, ground = 1, dig = 0, cstate = 000, nstate = 100, walk_left = 1, walk_right = 0, aaah = 0, digging = 0
+At time  65ns: sys_rst_n = 1, bump_left = 0, bump_right = 1, ground = 1, dig = 0, cstate = 100, nstate = 000, walk_left = 0, walk_right = 1, aaah = 0, digging = 0
+At time  75ns: sys_rst_n = 1, bump_left = 1, bump_right = 1, ground = 1, dig = 0, cstate = 000, nstate = 100, walk_left = 1, walk_right = 0, aaah = 0, digging = 0
+At time  85ns: sys_rst_n = 1, bump_left = 0, bump_right = 0, ground = 1, dig = 1, cstate = 100, nstate = 101, walk_left = 0, walk_right = 1, aaah = 0, digging = 0
+At time  95ns: sys_rst_n = 1, bump_left = 0, bump_right = 0, ground = 0, dig = 1, cstate = 101, nstate = 110, walk_left = 0, walk_right = 0, aaah = 0, digging = 1
+At time 105ns: sys_rst_n = 1, bump_left = 0, bump_right = 0, ground = 0, dig = 1, cstate = 110, nstate = 110, walk_left = 0, walk_right = 0, aaah = 1, digging = 0
+At time 295ns: sys_rst_n = 1, bump_left = 0, bump_right = 0, ground = 1, dig = 0, cstate = 110, nstate = 111, walk_left = 0, walk_right = 0, aaah = 1, digging = 0
+At time 305ns: sys_rst_n = 1, bump_left = 0, bump_right = 0, ground = 1, dig = 0, cstate = 111, nstate = 111, walk_left = 0, walk_right = 0, aaah = 0, digging = 0

@@ -1,0 +1,44 @@
+$date
+	Wed Dec 15 11:09:17 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module tb_notgate $end
+$scope module U0 $end
+$var wire 1 ! in $end
+$upscope $end
+$upscope $end
+$scope module tb_notgate $end
+$scope module U0 $end
+$var wire 1 " out $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1"
+0!
+$end
+#30
+0"
+1!
+#70
+1"
+0!
+#90
+0"
+1!
+#100
+1"
+0!
+#120
+0"
+1!
+#125
+1"
+0!
+#145

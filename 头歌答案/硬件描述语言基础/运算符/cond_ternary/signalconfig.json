@@ -1,0 +1,16 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_cond_ternary.U0.a[7:0]",
+        "tb_cond_ternary.U0.b[7:0]",
+        "tb_cond_ternary.U0.c[7:0]",
+	    "tb_cond_ternary.U0.d[7:0]",
+	    "tb_cond_ternary.U0.min[7:0]"
+    ],
+    
+    "offset": 5,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 40
+}

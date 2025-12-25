@@ -1,0 +1,47 @@
+{
+    "signal": [
+	["输入",
+        {
+            "name": "tb_mul_8bits.U0.A[7:0]",
+            "wave": "=.=.=.",
+            "data": [
+                "3",
+                "FD",
+                "5"
+            ]
+        },
+        {
+            "name": "tb_mul_8bits.U0.B[7:0]",
+            "wave": "=.===.",
+            "data": [
+                "5",
+                "FB",
+                "5",
+                "FD"
+            ]
+        },
+        {
+            "name": "tb_mul_8bits.U0.Signed",
+            "wave": "01....",
+            "data": []
+        },
+	],
+	["输出",
+        {
+            "name": "tb_mul_8bits.U0.Prod[15:0]",
+            "wave": "=..=..",
+            "data": [
+                "F",
+                "FFF1"
+            ]
+        }
+	]
+    ],
+    "config": {
+        "hscale": 1
+    },
+    "foot": {
+        "text": "Timing Diagram",
+        "tick": 0
+    }
+}

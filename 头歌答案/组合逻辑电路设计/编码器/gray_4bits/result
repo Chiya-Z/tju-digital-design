@@ -1,0 +1,38 @@
+Binary to Gray:
+VCD info: dumpfile waveform.vcd opened for output.
+At time   0ns: EN = 0, Din = 0000, gray_n = 0, Dout = 0000, valid = 0
+At time  10ns: EN = 1, Din = 0000, gray_n = 0, Dout = 0000, valid = 1
+At time  15ns: EN = 1, Din = 0001, gray_n = 0, Dout = 0001, valid = 1
+At time  20ns: EN = 1, Din = 0010, gray_n = 0, Dout = 0011, valid = 1
+At time  25ns: EN = 1, Din = 0011, gray_n = 0, Dout = 0010, valid = 1
+At time  30ns: EN = 1, Din = 0100, gray_n = 0, Dout = 0110, valid = 1
+At time  35ns: EN = 1, Din = 0101, gray_n = 0, Dout = 0111, valid = 1
+At time  40ns: EN = 1, Din = 0110, gray_n = 0, Dout = 0101, valid = 1
+At time  45ns: EN = 1, Din = 0111, gray_n = 0, Dout = 0100, valid = 1
+At time  50ns: EN = 1, Din = 1000, gray_n = 0, Dout = 1100, valid = 1
+At time  55ns: EN = 1, Din = 1001, gray_n = 0, Dout = 1101, valid = 1
+At time  60ns: EN = 1, Din = 1010, gray_n = 0, Dout = 1111, valid = 1
+At time  65ns: EN = 1, Din = 1011, gray_n = 0, Dout = 1110, valid = 1
+At time  70ns: EN = 1, Din = 1100, gray_n = 0, Dout = 1010, valid = 1
+At time  75ns: EN = 1, Din = 1101, gray_n = 0, Dout = 1011, valid = 1
+At time  80ns: EN = 1, Din = 1110, gray_n = 0, Dout = 1001, valid = 1
+At time  85ns: EN = 1, Din = 1111, gray_n = 0, Dout = 1000, valid = 1
+
+Gray to Binary:
+At time  90ns: EN = 0, Din = 0000, gray_n = 1, Dout = 0000, valid = 0
+At time 100ns: EN = 1, Din = 0000, gray_n = 1, Dout = 0000, valid = 1
+At time 105ns: EN = 1, Din = 0001, gray_n = 1, Dout = 0001, valid = 1
+At time 110ns: EN = 1, Din = 0011, gray_n = 1, Dout = 0010, valid = 1
+At time 115ns: EN = 1, Din = 0010, gray_n = 1, Dout = 0011, valid = 1
+At time 120ns: EN = 1, Din = 0110, gray_n = 1, Dout = 0100, valid = 1
+At time 125ns: EN = 1, Din = 0111, gray_n = 1, Dout = 0101, valid = 1
+At time 130ns: EN = 1, Din = 0101, gray_n = 1, Dout = 0110, valid = 1
+At time 135ns: EN = 1, Din = 0100, gray_n = 1, Dout = 0111, valid = 1
+At time 140ns: EN = 1, Din = 1100, gray_n = 1, Dout = 1000, valid = 1
+At time 145ns: EN = 1, Din = 1101, gray_n = 1, Dout = 1001, valid = 1
+At time 150ns: EN = 1, Din = 1111, gray_n = 1, Dout = 1010, valid = 1
+At time 155ns: EN = 1, Din = 1110, gray_n = 1, Dout = 1011, valid = 1
+At time 160ns: EN = 1, Din = 1010, gray_n = 1, Dout = 1100, valid = 1
+At time 165ns: EN = 1, Din = 1011, gray_n = 1, Dout = 1101, valid = 1
+At time 170ns: EN = 1, Din = 1001, gray_n = 1, Dout = 1110, valid = 1
+At time 175ns: EN = 1, Din = 1000, gray_n = 1, Dout = 1111, valid = 1

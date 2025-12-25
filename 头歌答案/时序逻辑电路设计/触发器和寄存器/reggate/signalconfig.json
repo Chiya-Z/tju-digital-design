@@ -1,0 +1,15 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_reggate.U0.sys_clk",
+        "tb_reggate.U0.sys_rst_n",
+        "tb_reggate.U0.x",
+        "tb_reggate.U0.z"
+    ],
+    
+    "offset": 0,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 80
+}

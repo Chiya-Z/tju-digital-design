@@ -1,0 +1,13 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_reduc.U0.in[7:0]",
+        "tb_reduc.U0.parity"
+    ],
+    
+    "offset": 5,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 40
+}

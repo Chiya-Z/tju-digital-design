@@ -1,0 +1,14 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_clken.U0.sys_clk",
+        "tb_clken.U0.sys_rst_n",
+        "tb_clken.U0.clk_flag"
+    ],
+    
+    "offset": 0,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 220
+}

@@ -1,0 +1,16 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_edge_det.U0.sys_clk",
+        "tb_edge_det.U0.sys_rst_n",
+        "tb_edge_det.U0.i_btn",
+        "tb_edge_det.U0.posedge_flag",
+        "tb_edge_det.U0.negedge_flag"
+    ],
+    
+    "offset": 0,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 130
+}

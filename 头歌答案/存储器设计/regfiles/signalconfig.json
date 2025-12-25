@@ -1,0 +1,20 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_regfiles.U0.sys_clk",
+        "tb_regfiles.U0.sys_rst_n",
+        "tb_regfiles.U0.we",
+        "tb_regfiles.U0.wa[2:0]",
+        "tb_regfiles.U0.wd[7:0]",
+        "tb_regfiles.U0.ra1[2:0]",
+        "tb_regfiles.U0.ra2[2:0]",
+        "tb_regfiles.U0.rd1[7:0]",
+        "tb_regfiles.U0.rd1[7:0]"
+    ],
+    
+    "offset": 0,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 180
+}

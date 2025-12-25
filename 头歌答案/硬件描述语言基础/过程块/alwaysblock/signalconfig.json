@@ -1,0 +1,15 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_alwaysblock.U0.a",
+        "tb_alwaysblock.U0.b",
+        "tb_alwaysblock.U0.out_assign",
+        "tb_alwaysblock.U0.out_alwaysblock"
+    ],
+    
+    "offset": 5,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 20
+}

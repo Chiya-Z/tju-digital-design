@@ -1,0 +1,52 @@
+{
+    "signal": [
+	["输入",
+        {
+            "name": "tb_mod_shift.U0.clk",
+            "wave": "01010101.",
+            "data": []
+        },
+        {
+            "name": "tb_mod_shift.U0.d[7:0]",
+            "wave": "=.=.=.=..",
+            "data": [
+                "17",
+                "3A",
+                "56",
+                "23"
+            ]
+        },
+        {
+            "name": "tb_mod_shift.U0.sel[1:0]",
+            "wave": "=.=.=.=..",
+            "data": [
+                "0",
+                "1",
+                "2",
+                "3"
+            ]
+        },
+	],
+	["输出",
+        {
+            "name": "tb_mod_shift.U0.q[7:0]",
+            "wave": "=..=====.",
+            "data": [
+                "17",
+                "3A",
+                "17",
+                "3A",
+                "17",
+                "3A"
+            ]
+        }
+	]
+    ],
+    "config": {
+        "hscale": 1
+    },
+    "foot": {
+        "text": "Timing Diagram",
+        "tick": 0
+    }
+}

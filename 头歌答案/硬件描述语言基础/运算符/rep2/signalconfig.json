@@ -1,0 +1,17 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_rep2.U0.a",
+	"tb_rep2.U0.b",
+	"tb_rep2.U0.c",
+	"tb_rep2.U0.d",
+	"tb_rep2.U0.e",
+        "tb_rep2.U0.out[24:0]"
+    ],
+    
+    "offset": 5,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 165
+}

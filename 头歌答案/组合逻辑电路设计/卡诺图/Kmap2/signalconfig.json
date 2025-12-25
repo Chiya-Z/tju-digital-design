@@ -1,0 +1,16 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_Kmap2.U0.a",
+        "tb_Kmap2.U0.b",
+        "tb_Kmap2.U0.c",
+        "tb_Kmap2.U0.d",
+        "tb_Kmap2.U0.out"
+    ],
+    
+    "offset": 0,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 85
+}

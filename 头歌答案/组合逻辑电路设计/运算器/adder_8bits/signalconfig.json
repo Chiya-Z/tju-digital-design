@@ -1,0 +1,16 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_adder_8bits.U0.A[7:0]",
+        "tb_adder_8bits.U0.B[7:0]",
+        "tb_adder_8bits.U0.Cin",
+        "tb_adder_8bits.U0.S[7:0]",
+        "tb_adder_8bits.U0.Cout"
+    ],
+    
+    "offset": 0,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 20
+}

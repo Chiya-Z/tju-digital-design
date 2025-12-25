@@ -1,0 +1,12 @@
+VCD info: dumpfile waveform.vcd opened for output.
+At time   0ns: sys_rst_n = 0, in = 0, cstate = xx, nstate = xx, out = x
+At time   5ns: sys_rst_n = 0, in = 0, cstate = 00, nstate = 00, out = 0
+At time  20ns: sys_rst_n = 1, in = 0, cstate = 00, nstate = 00, out = 0
+At time  35ns: sys_rst_n = 1, in = 1, cstate = 00, nstate = 01, out = 0
+At time  45ns: sys_rst_n = 1, in = 0, cstate = 01, nstate = 10, out = 0
+At time  55ns: sys_rst_n = 1, in = 1, cstate = 10, nstate = 11, out = 0
+At time  65ns: sys_rst_n = 1, in = 0, cstate = 11, nstate = 10, out = 1
+At time  75ns: sys_rst_n = 1, in = 1, cstate = 10, nstate = 11, out = 0
+At time  85ns: sys_rst_n = 1, in = 1, cstate = 11, nstate = 01, out = 1
+At time  95ns: sys_rst_n = 1, in = 0, cstate = 01, nstate = 10, out = 0
+At time 105ns: sys_rst_n = 1, in = 0, cstate = 10, nstate = 00, out = 0

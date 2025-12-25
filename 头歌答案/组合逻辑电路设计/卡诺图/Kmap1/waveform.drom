@@ -1,0 +1,35 @@
+{
+    "signal": [
+	["输入",
+        {
+            "name": "tb_Kmap1.U0.a",
+            "wave": "0...1.....",
+            "data": []
+        },
+        {
+            "name": "tb_Kmap1.U0.b",
+            "wave": "0.1.0.1...",
+            "data": []
+        },
+        {
+            "name": "tb_Kmap1.U0.c",
+            "wave": "01010101..",
+            "data": []
+        },
+	],
+	["输出",
+        {
+            "name": "tb_Kmap1.U0.out",
+            "wave": "01........",
+            "data": []
+        }
+	]
+    ],
+    "config": {
+        "hscale": 1
+    },
+    "foot": {
+        "text": "Timing Diagram",
+        "tick": 0
+    }
+}

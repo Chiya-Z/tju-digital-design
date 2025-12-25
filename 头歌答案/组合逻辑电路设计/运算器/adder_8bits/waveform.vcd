@@ -1,0 +1,62 @@
+$date
+	Sun Jan  9 14:54:05 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module tb_adder_8bits $end
+$scope module U0 $end
+$var wire 8 ! A [7:0] $end
+$upscope $end
+$upscope $end
+$scope module tb_adder_8bits $end
+$scope module U0 $end
+$var wire 8 " B [7:0] $end
+$upscope $end
+$upscope $end
+$scope module tb_adder_8bits $end
+$scope module U0 $end
+$var wire 1 # Cin $end
+$upscope $end
+$upscope $end
+$scope module tb_adder_8bits $end
+$scope module U0 $end
+$var wire 8 $ S [7:0] $end
+$upscope $end
+$upscope $end
+$scope module tb_adder_8bits $end
+$scope module U0 $end
+$var wire 1 % Cout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0%
+b1001111 $
+1#
+b101101 "
+b100001 !
+$end
+#5
+1%
+b110000 $
+0#
+b10001111 "
+b10100001 !
+#10
+0%
+b11100111 $
+1#
+b1101101 "
+b1111001 !
+#15
+1%
+b1010000 $
+0#
+b1100111 "
+b11101001 !
+#20

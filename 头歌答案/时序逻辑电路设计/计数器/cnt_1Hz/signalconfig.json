@@ -1,0 +1,16 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_cnt_1Hz.U0.sys_clk",
+        "tb_cnt_1Hz.U0.sys_rst_n",
+        "tb_cnt_1Hz.U0.cnt[11:0]",
+        "tb_cnt_1Hz.U0.en[2:0]",
+        "tb_cnt_1Hz.U0.OneHertz"
+    ],
+    
+    "offset": 0,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 10040
+}

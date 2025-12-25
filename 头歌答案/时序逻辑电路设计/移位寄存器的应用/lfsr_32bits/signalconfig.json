@@ -1,0 +1,14 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_lfsr_32bits.U0.sys_clk",
+        "tb_lfsr_32bits.U0.sys_rst_n",
+        "tb_lfsr_32bits.U0.Q[31:0]"
+    ],
+    
+    "offset": 0,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 120
+}

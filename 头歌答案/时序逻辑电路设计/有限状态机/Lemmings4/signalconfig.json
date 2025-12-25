@@ -1,0 +1,23 @@
+{
+    "signal": {
+    },
+    "filter": [
+        "tb_Lemmings4.U0.sys_clk",
+        "tb_Lemmings4.U0.sys_rst_n",
+        "tb_Lemmings4.U0.bump_left",
+        "tb_Lemmings4.U0.bump_right",
+        "tb_Lemmings4.U0.ground",
+        "tb_Lemmings4.U0.dig",
+        "tb_Lemmings4.U0.cstate[2:0]",
+        "tb_Lemmings4.U0.nstate[2:0]",
+        "tb_Lemmings4.U0.walk_left",
+        "tb_Lemmings4.U0.walk_right",
+        "tb_Lemmings4.U0.aaah",
+        "tb_Lemmings4.U0.digging"
+    ],
+    
+    "offset": 0,
+    "samplerate": 5,
+    "clocks": [],
+    "maxtime": 320
+}
