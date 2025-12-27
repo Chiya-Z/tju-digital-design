@@ -1,6 +1,7 @@
 #include "helper.h"
 #include "monitor.h"
 #include "reg.h"
+#include "trace.h"
 
 extern uint32_t instr;
 extern char assembly[80];
@@ -44,7 +45,9 @@ make_helper(addi_w) {
 	decode_si12_type(instr);
 
 	if(op_dest->reg != 0) {
-		reg_w(op_dest->reg) = op_src1->val + op_src2->val;
+		uint32_t val = op_src1->val + op_src2->val;
+		trace_reg_write(cpu.pc, op_dest->reg, val);
+		reg_w(op_dest->reg) = val;
 	}
 	sprintf(assembly, "addi.w\t%s,\t%s,\t0x%03x", REG_NAME(op_dest->reg), REG_NAME(op_src1->reg), (instr >> 10) & 0x00000FFF);
 }
@@ -54,7 +57,9 @@ make_helper(ori) {
 
 	decode_ui12_type(instr);
 	if(op_dest->reg != 0) {
-		reg_w(op_dest->reg) = op_src1->val | op_src2->val;
+		uint32_t val = op_src1->val | op_src2->val;
+		trace_reg_write(cpu.pc, op_dest->reg, val);
+		reg_w(op_dest->reg) = val;
 	}
 	sprintf(assembly, "ori\t%s,\t%s,\t0x%03x", REG_NAME(op_dest->reg), REG_NAME(op_src1->reg), op_src2->imm);
 }
@@ -63,7 +68,9 @@ make_helper(andi) {
 
 	decode_ui12_type(instr);
 	if(op_dest->reg != 0) {
-		reg_w(op_dest->reg) = op_src1->val & op_src2->val;
+		uint32_t val = op_src1->val & op_src2->val;
+		trace_reg_write(cpu.pc, op_dest->reg, val);
+		reg_w(op_dest->reg) = val;
 	}
 	sprintf(assembly, "andi\t%s,\t%s,\t0x%03x", REG_NAME(op_dest->reg), REG_NAME(op_src1->reg), op_src2->imm);
 }
@@ -82,6 +89,7 @@ make_helper(ld_w) {
 	uint32_t addr = vaddr_to_paddr(op_src1->val + op_src2->val);
 	uint32_t data = mem_read(addr, 4);
 	if(op_dest->reg != 0) {
+		trace_reg_write(cpu.pc, op_dest->reg, data);
 		reg_w(op_dest->reg) = data;
 	}
 	sprintf(assembly, "ld.w\t%s,\t%s,\t0x%03x", REG_NAME(op_dest->reg), REG_NAME(op_src1->reg), (instr >> 10) & 0x00000FFF);
@@ -102,7 +110,9 @@ make_helper(ld_b) {
 	uint32_t data = mem_read(addr, 1);
 	int8_t b = (int8_t)(data & 0xFF);
 	if(op_dest->reg != 0) {
-		reg_w(op_dest->reg) = (uint32_t)((int32_t)b);
+		uint32_t val = (uint32_t)((int32_t)b);
+		trace_reg_write(cpu.pc, op_dest->reg, val);
+		reg_w(op_dest->reg) = val;
 	}
 	sprintf(assembly, "ld.b\t%s,\t%s,\t0x%03x", REG_NAME(op_dest->reg), REG_NAME(op_src1->reg), (instr >> 10) & 0x00000FFF);
 }

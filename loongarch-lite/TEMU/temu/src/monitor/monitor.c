@@ -1,4 +1,5 @@
 #include "temu.h"
+#include "trace.h"
 
 #define ENTRY_START 0x80000000
 
@@ -32,6 +33,9 @@ void init_monitor(int argc, char *argv[]) {
 
 	/* Initialize the watchpoint pool. */
 	init_wp_pool();
+
+	/* Initialize trace. */
+	trace_init();
 
 	/* Display welcome message. */
 	welcome();

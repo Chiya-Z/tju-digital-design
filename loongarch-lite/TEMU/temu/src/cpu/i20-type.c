@@ -1,6 +1,7 @@
 #include "helper.h"
 #include "monitor.h"
 #include "reg.h"
+#include "trace.h"
 
 extern uint32_t instr;
 extern char assembly[80];
@@ -21,7 +22,9 @@ make_helper(lu12i_w) {
 
 	decode_i20_type(instr);
 	if(op_dest->reg != 0) {
-		reg_w(op_dest->reg) = (op_src2->val << 12);
+		uint32_t val = (op_src2->val << 12);
+		trace_reg_write(cpu.pc, op_dest->reg, val);
+		reg_w(op_dest->reg) = val;
 	}
 	sprintf(assembly, "lu12i.w\t%s,\t0x%04x", REG_NAME(op_dest->reg), op_src2->imm);
 }
@@ -34,7 +37,9 @@ make_helper(pcaddu12i) {
 	uint32_t pc_val = cpu.pc;
 	uint32_t imm = (uint32_t)(simm20 * 4096);
 	if(op_dest->reg != 0) {
-		reg_w(op_dest->reg) = pc_val + imm;
+		uint32_t val = pc_val + imm;
+		trace_reg_write(cpu.pc, op_dest->reg, val);
+		reg_w(op_dest->reg) = val;
 	}
 	sprintf(assembly, "pcaddu12i\t%s,\t0x%04x", REG_NAME(op_dest->reg), op_src2->imm);
 }

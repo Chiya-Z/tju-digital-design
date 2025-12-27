@@ -31,6 +31,16 @@
 - `d N`：删除编号为 N 的监视点
 > 支持运算符: `+ - * / == != && || !`（`*` 在表达式开头或紧跟运算符/左括号时视为解引用）。
 
+### 需求: golden trace（task3）
+**模块:** TEMU
+生成指令执行的 golden trace：除分支与 Store 指令外，记录每条“写寄存器”指令的 PC 与写回信息。
+
+#### 场景: trace 生成
+- 输出路径: `TEMU/temu/trace/golden_trace.txt`
+- 列格式: `pc reg val`（表头为第一行）
+  - `pc` / `val`：32-bit 十六进制（不带 `0x`）
+  - `reg`：十进制寄存器编号（个位数补 `0` 对齐）
+
 ### 需求: task1 指令实现（LoongArch32）
 **模块:** TEMU
 在框架代码基础上补全 LoongArch32 常用指令的译码与执行逻辑（32 位、小端），用于支撑测试程序运行与后续扩展。
@@ -59,3 +69,4 @@
 ## 变更历史
 - [202512261819_temu_task1_instructions](../../history/2025-12/202512261819_temu_task1_instructions/) - 补全 task1 指令集实现与解码表
 - [202512271113_temu_task2_debugger](../../history/2025-12/202512271113_temu_task2_debugger/) - 增加简易调试器命令与表达式/监视点支持
+- [202512271147_temu_task3_golden_trace](../../history/2025-12/202512271147_temu_task3_golden_trace/) - 增加 trace 模块并输出 golden trace

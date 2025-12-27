@@ -1,6 +1,7 @@
 #include "helper.h"
 #include "monitor.h"
 #include "reg.h"
+#include "trace.h"
 
 extern uint32_t instr;
 extern char assembly[80];
@@ -24,7 +25,9 @@ make_helper(add_w) {
 
 	decode_3r_type(instr);
 	if(op_dest->reg != 0) {
-		reg_w(op_dest->reg) = op_src1->val + op_src2->val;
+		uint32_t val = op_src1->val + op_src2->val;
+		trace_reg_write(cpu.pc, op_dest->reg, val);
+		reg_w(op_dest->reg) = val;
 	}
 	sprintf(assembly, "add.w\t%s,\t%s,\t%s", REG_NAME(op_dest->reg), REG_NAME(op_src1->reg), REG_NAME(op_src2->reg));
 }
@@ -33,7 +36,9 @@ make_helper(or) {
 
 	decode_3r_type(instr);
 	if(op_dest->reg != 0) {
-		reg_w(op_dest->reg) = (op_src1->val | op_src2->val);
+		uint32_t val = (op_src1->val | op_src2->val);
+		trace_reg_write(cpu.pc, op_dest->reg, val);
+		reg_w(op_dest->reg) = val;
 	}
 	sprintf(assembly, "or\t%s,\t%s,\t%s", REG_NAME(op_dest->reg), REG_NAME(op_src1->reg), REG_NAME(op_src2->reg));
 }
@@ -42,7 +47,9 @@ make_helper(xor) {
 
 	decode_3r_type(instr);
 	if(op_dest->reg != 0) {
-		reg_w(op_dest->reg) = (op_src1->val ^ op_src2->val);
+		uint32_t val = (op_src1->val ^ op_src2->val);
+		trace_reg_write(cpu.pc, op_dest->reg, val);
+		reg_w(op_dest->reg) = val;
 	}
 	sprintf(assembly, "xor\t%s,\t%s,\t%s", REG_NAME(op_dest->reg), REG_NAME(op_src1->reg), REG_NAME(op_src2->reg));
 }
@@ -51,7 +58,9 @@ make_helper(slt) {
 
 	decode_3r_type(instr);
 	if(op_dest->reg != 0) {
-		reg_w(op_dest->reg) = ((int32_t)op_src1->val < (int32_t)op_src2->val) ? 1 : 0;
+		uint32_t val = ((int32_t)op_src1->val < (int32_t)op_src2->val) ? 1 : 0;
+		trace_reg_write(cpu.pc, op_dest->reg, val);
+		reg_w(op_dest->reg) = val;
 	}
 	sprintf(assembly, "slt\t%s,\t%s,\t%s", REG_NAME(op_dest->reg), REG_NAME(op_src1->reg), REG_NAME(op_src2->reg));
 }
@@ -75,7 +84,9 @@ make_helper(srai_w) {
 
 	decode_srai_w(instr);
 	if(op_dest->reg != 0) {
-		reg_w(op_dest->reg) = (uint32_t)(((int32_t)op_src1->val) >> (op_src2->imm & 0x1F));
+		uint32_t val = (uint32_t)(((int32_t)op_src1->val) >> (op_src2->imm & 0x1F));
+		trace_reg_write(cpu.pc, op_dest->reg, val);
+		reg_w(op_dest->reg) = val;
 	}
 	sprintf(assembly, "srai.w\t%s,\t%s,\t0x%02x", REG_NAME(op_dest->reg), REG_NAME(op_src1->reg), op_src2->imm);
 }

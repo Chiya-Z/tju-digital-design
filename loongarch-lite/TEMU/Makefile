@@ -15,11 +15,11 @@ DEBUG := false
 
 # Compilation flags
 CC := gcc
-CFLAGS := -I$(INCLUDE_DIR) -I$(INCLUDE_DIR)/cpu -I$(INCLUDE_DIR)/memory -I$(INCLUDE_DIR)/monitor -Wall -Werror
+CFLAGS := -I$(INCLUDE_DIR) -I$(INCLUDE_DIR)/cpu -I$(INCLUDE_DIR)/memory -I$(INCLUDE_DIR)/monitor -I$(INCLUDE_DIR)/trace -Wall -Werror
 LDFLAGS := -lreadline
 
 # Files to be compiled
-SRCS := $(wildcard $(SRC_DIR)/*.c) $(wildcard $(SRC_DIR)/memory/*.c) $(wildcard $(SRC_DIR)/cpu/*.c) $(wildcard $(SRC_DIR)/monitor/*.c)
+SRCS := $(wildcard $(SRC_DIR)/*.c) $(wildcard $(SRC_DIR)/memory/*.c) $(wildcard $(SRC_DIR)/cpu/*.c) $(wildcard $(SRC_DIR)/monitor/*.c) $(wildcard $(SRC_DIR)/trace/*.c)
 
 TEMU_TARGET := temu
 
@@ -50,4 +50,3 @@ clean:
 	rm -f -r ./loongarch_sc/build
 	rm -f log.txt
 	rm -f *.bin
-
