@@ -1,0 +1,63 @@
+       0:   15 00 02 17         lu12i.w	$s0,	0x80010
+       4:   14 24 68 ac         lu12i.w	$t0,	0x12345
+       8:   03 99 e1 8c         ori	$t0,	$t0,	0x678
+       c:   14 24 68 ad         lu12i.w	$t1,	0x12345
+      10:   03 99 e1 ad         ori	$t1,	$t1,	0x678
+      14:   5c 00 f9 8d         bne	$t0,	$t1,	0x003e
+      18:   1c 00 00 2e         pcaddu12i	$t2,	0x0001
+      1c:   29 80 02 ee         st.w	$t2,	$s0,	0x000
+      20:   02 80 04 0f         addi.w	$t3,	$zero,	0x001
+      24:   02 bf fd ef         addi.w	$t3,	$t3,	0xfff
+      28:   5c 00 e9 e0         bne	$t3,	$zero,	0x003a
+      2c:   03 83 fc 10         ori	$t4,	$zero,	0x0ff
+      30:   03 40 3e 11         andi	$t5,	$t4,	0x00f
+      34:   02 80 3c 12         addi.w	$t6,	$zero,	0x00f
+      38:   5c 00 de 32         bne	$t5,	$t6,	0x0037
+      3c:   14 00 02 04         lu12i.w	a0,	0x0010
+      40:   03 88 d0 84         ori	a0,	a0,	0x234
+      44:   14 00 04 05         lu12i.w	$a1,	0x0020
+      48:   03 80 04 a5         ori	$a1,	$a1,	0x001
+      4c:   00 10 14 86         add.w	$a2,	a0,	$a1
+      50:   14 00 06 07         lu12i.w	$a3,	0x0030
+      54:   03 88 d4 e7         ori	$a3,	$a3,	0x235
+      58:   5c 00 c0 c7         bne	$a2,	$a3,	0x0030
+      5c:   00 15 14 8c         or	$t0,	a0,	$a1
+      60:   14 00 06 0d         lu12i.w	$t1,	0x0030
+      64:   03 88 d5 ad         ori	$t1,	$t1,	0x235
+      68:   5c 00 b5 8d         bne	$t0,	$t1,	0x002d
+      6c:   00 15 94 8e         xor	$t2,	a0,	$a1
+      70:   14 00 06 0f         lu12i.w	$t3,	0x0030
+      74:   03 88 d5 ef         ori	$t3,	$t3,	0x235
+      78:   03 7f fd ef         andi	$t3,	$t3,	0xfff
+      7c:   03 7f fd ce         andi	$t2,	$t2,	0xfff
+      80:   02 88 d4 10         addi.w	$t4,	$zero,	0x235
+      84:   5c 00 9d d0         bne	$t2,	$t4,	0x0027
+      88:   02 bf fc 11         addi.w	$t5,	$zero,	0xfff
+      8c:   02 80 04 12         addi.w	$t6,	$zero,	0x001
+      90:   00 12 4a 33         slt	$t7,	$t5,	$t6
+      94:   02 80 04 0c         addi.w	$t0,	$zero,	0x001
+      98:   5c 00 8e 6c         bne	$t7,	$t0,	0x0023
+      9c:   15 00 00 0d         lu12i.w	$t1,	0x80000
+      a0:   00 48 85 ae         srai.w	$t2,	$t1,	0x01
+      a4:   15 80 00 0f         lu12i.w	$t3,	0xc0000
+      a8:   5c 00 81 cf         bne	$t2,	$t3,	0x0020
+      ac:   14 00 02 38         lu12i.w	$s1,	0x0011
+      b0:   03 84 47 18         ori	$s1,	$s1,	0x111
+      b4:   29 80 12 f8         st.w	$s1,	$s0,	0x004
+      b8:   28 80 12 f9         ld.w	$s2,	$s0,	0x004
+      bc:   5c 00 73 19         bne	$s1,	$s2,	0x001c
+      c0:   02 82 00 1a         addi.w	$s3,	$zero,	0x080
+      c4:   29 00 22 fa         st.b	$s3,	$s0,	0x008
+      c8:   28 00 22 fb         ld.b	$s4,	$s0,	0x008
+      cc:   02 be 00 1c         addi.w	$s5,	$zero,	0xf80
+      d0:   5c 00 63 7c         bne	$s4,	$s5,	0x0018
+      d4:   02 81 54 0c         addi.w	$t0,	$zero,	0x055
+      d8:   02 81 54 0d         addi.w	$t1,	$zero,	0x055
+      dc:   58 00 09 8d         beq	$t0,	$t1,	0x0002
+      e4:   02 80 04 0e         addi.w	$t2,	$zero,	0x001
+      e8:   02 80 08 0f         addi.w	$t3,	$zero,	0x002
+      ec:   5c 00 09 cf         bne	$t2,	$t3,	0x0002
+      f4:   02 80 04 10         addi.w	$t4,	$zero,	0x001
+      f8:   02 bf fc 11         addi.w	$t5,	$zero,	0xfff
+      fc:   64 00 0a 11         bge	$t4,	$t5,	0x0002
+     104:   80 00 00 00         bge	$t4,	$t5,	0x0002
