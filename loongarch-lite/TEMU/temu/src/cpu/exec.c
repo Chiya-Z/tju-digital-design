@@ -4,6 +4,7 @@
 typedef void (*op_fun)(uint32_t);
 static make_helper(_2byte_esc);
 static make_helper(load_store);
+static make_helper(_group_shift_imm);
 
 Operands ops_decoded;
 uint32_t instr;
@@ -115,9 +116,9 @@ op_fun opcode_table [64] = {
 };
 
 op_fun _2byte_opcode_table [16] = {
-/* 0x00 */	_group1_3R, inv, inv, inv, 
-/* 0x04 */	inv, inv, inv, inv, 
-/* 0x08 */	inv, inv, addi_w, inv, 
+/* 0x00 */	_group1_3R, _group_shift_imm, inv, inv,
+/* 0x04 */	inv, inv, inv, inv,
+/* 0x08 */	inv, inv, addi_w, inv,
 /* 0x0c */	inv, andi, ori, inv
 };
 
@@ -132,6 +133,40 @@ static make_helper(_2byte_esc) {
 	ops_decoded.opcode2 = ((instr << 6) & 0xF0000000) >> 28;
 	_2byte_opcode_table[ops_decoded.opcode2](pc); 
 }
+
+make_group(_group_shift_imm,
+	inv, inv, inv, inv,  /* 0x00  */ 
+	inv, inv, inv, inv,  /* 0x04  */
+	inv, inv, inv, inv,  /* 0x08  */
+	inv, inv, inv, inv,  /* 0x0c  */
+	inv, srai_w, inv, inv,  /* 0x10  */
+	inv, inv, inv, inv,  /* 0x14  */
+	inv, inv, inv, inv,  /* 0x18  */
+	inv, inv, inv, inv,  /* 0x1c  */
+	inv, inv, inv, inv,  /* 0x20  */
+        inv, inv, inv, inv,  /* 0x24  */
+        inv, inv, inv, inv,  /* 0x28  */
+        inv, inv, inv, inv,  /* 0x2c  */
+        inv, inv, inv, inv,  /* 0x30  */
+        inv, inv, inv, inv,  /* 0x34  */
+        inv, inv, inv, inv,  /* 0x38  */
+        inv, inv, inv, inv,  /* 0x3c  */
+	inv, inv, inv, inv,  /* 0x40  */
+        inv, inv, inv, inv,  /* 0x44  */
+        inv, inv, inv, inv,  /* 0x48  */
+        inv, inv, inv, inv,  /* 0x4c  */
+        inv, inv, inv, inv,  /* 0x50  */
+        inv, inv, inv, inv,  /* 0x54  */
+        inv, inv, inv, inv,  /* 0x58  */
+        inv, inv, inv, inv,  /* 0x5c  */
+	inv, inv, inv, inv,  /* 0x60  */
+        inv, inv, inv, inv,  /* 0x64  */
+        inv, inv, inv, inv,  /* 0x68  */
+        inv, inv, inv, inv,  /* 0x6c  */
+        inv, inv, inv, inv,  /* 0x70  */
+        inv, inv, inv, inv,  /* 0x74  */
+        inv, inv, inv, inv,  /* 0x78  */
+        inv, inv, inv, inv)  /* 0x7c  */
 
 static make_helper(load_store) {
 	static op_fun load_store_table[16] = {

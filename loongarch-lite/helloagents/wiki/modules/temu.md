@@ -27,6 +27,7 @@
 - 3r-type：`add.w`、`or`、`xor`、`slt`、`srai.w`
 - i20-type：`lu12i.w`、`pcaddu12i`
 - i16-type：`beq`、`bne`、`bge`
+> 备注: 解码映射按指令编码格式实现（以 `instr[31:26]` 为主 opcode；`opcode1==0` 时进一步使用 `instr[25:22]` 与 `instr[21:15]` 分组）。
 
 ## API接口
 
