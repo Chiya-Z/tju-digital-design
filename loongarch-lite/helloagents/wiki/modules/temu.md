@@ -49,6 +49,7 @@
 - 启动 TEMU 后访问 `http://127.0.0.1:8080/`
 - 在页面中执行 Run/Step/Stop/Reset，查看寄存器与内存变化
 - 在 Editor 页签中选择已有 `.S` 文件或编辑后重新汇编并重载
+> 备注: UI 采用亮色风格，并在 Console 页对当前执行的指令行进行轻微高亮，便于定位。
 
 #### API 约定（本地）
 - `GET /api/state`：获取 `pc/gpr/temu_state`
