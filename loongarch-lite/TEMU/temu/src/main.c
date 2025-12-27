@@ -2,6 +2,7 @@
 void init_monitor(int, char *[]);
 void restart();
 void ui_mainloop();
+void web_stop();
 
 int main(int argc, char *argv[]) {
 
@@ -14,5 +15,6 @@ int main(int argc, char *argv[]) {
 	/* Receive commands from user. */
 	ui_mainloop();
 
+	web_stop();
 	return 0;
 }

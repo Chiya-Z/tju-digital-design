@@ -1,5 +1,6 @@
 #include "temu.h"
 #include "trace.h"
+#include "web.h"
 
 #define ENTRY_START 0x80000000
 
@@ -36,6 +37,9 @@ void init_monitor(int argc, char *argv[]) {
 
 	/* Initialize trace. */
 	trace_init();
+
+	/* Start Web UI. */
+	web_start(8080);
 
 	/* Display welcome message. */
 	welcome();

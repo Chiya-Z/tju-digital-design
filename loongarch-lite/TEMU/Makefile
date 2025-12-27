@@ -15,11 +15,11 @@ DEBUG := false
 
 # Compilation flags
 CC := gcc
-CFLAGS := -I$(INCLUDE_DIR) -I$(INCLUDE_DIR)/cpu -I$(INCLUDE_DIR)/memory -I$(INCLUDE_DIR)/monitor -I$(INCLUDE_DIR)/trace -Wall -Werror
-LDFLAGS := -lreadline
+CFLAGS := -I$(INCLUDE_DIR) -I$(INCLUDE_DIR)/cpu -I$(INCLUDE_DIR)/memory -I$(INCLUDE_DIR)/monitor -I$(INCLUDE_DIR)/trace -I$(INCLUDE_DIR)/web -Wall -Werror -pthread
+LDFLAGS := -lreadline -pthread
 
 # Files to be compiled
-SRCS := $(wildcard $(SRC_DIR)/*.c) $(wildcard $(SRC_DIR)/memory/*.c) $(wildcard $(SRC_DIR)/cpu/*.c) $(wildcard $(SRC_DIR)/monitor/*.c) $(wildcard $(SRC_DIR)/trace/*.c)
+SRCS := $(wildcard $(SRC_DIR)/*.c) $(wildcard $(SRC_DIR)/memory/*.c) $(wildcard $(SRC_DIR)/cpu/*.c) $(wildcard $(SRC_DIR)/monitor/*.c) $(wildcard $(SRC_DIR)/trace/*.c) $(wildcard $(SRC_DIR)/web/*.c)
 
 TEMU_TARGET := temu
 

@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TEMU Web UI</title>
+  <style>
+    :root { --bg:#0b1220; --panel:#0f1a2e; --muted:#8aa0c6; --text:#e6eefc; --accent:#58d1c9; --danger:#ff6b6b; --border:#20304f; --btn:#172848; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background: var(--bg); color: var(--text); }
+    header { display:flex; gap:12px; align-items:center; padding:12px 16px; border-bottom:1px solid var(--border); position:sticky; top:0; background: rgba(11,18,32,.95); backdrop-filter: blur(8px); }
+    header .brand { font-weight: 700; letter-spacing:.2px; color: var(--accent); }
+    header .spacer { flex:1; }
+    .btn { background: var(--btn); color: var(--text); border:1px solid var(--border); padding:8px 10px; border-radius:8px; cursor:pointer; }
+    .btn.primary { background: rgba(88,209,201,.14); border-color: rgba(88,209,201,.4); }
+    .btn.danger { background: rgba(255,107,107,.12); border-color: rgba(255,107,107,.35); }
+    .btn:disabled { opacity:.45; cursor:not-allowed; }
+    .field { display:flex; align-items:center; gap:8px; }
+    input, textarea, select { width:100%; background:#0c162b; color:var(--text); border:1px solid var(--border); border-radius:8px; padding:8px 10px; }
+    textarea { min-height: 220px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+    main { display:grid; grid-template-columns: 1fr 420px; gap:12px; padding:12px; }
+    .panel { background: var(--panel); border:1px solid var(--border); border-radius: 12px; overflow:hidden; }
+    .panel h3 { margin:0; padding:10px 12px; border-bottom:1px solid var(--border); font-size:14px; color: var(--muted); display:flex; gap:10px; align-items:center; }
+    .panel .content { padding:12px; }
+    .grid2 { display:grid; grid-template-columns: 1fr 1fr; gap:10px; }
+    .tabs { display:flex; gap:10px; padding:10px 12px; border-bottom:1px solid var(--border); }
+    .tab { background: transparent; border: none; color: var(--muted); cursor: pointer; padding:8px 10px; border-radius: 999px; }
+    .tab.active { color: var(--text); background: rgba(88,209,201,.12); border:1px solid rgba(88,209,201,.25); }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+    table { width:100%; border-collapse: collapse; }
+    th, td { padding:6px 8px; border-bottom:1px solid var(--border); font-size: 12px; }
+    th { text-align:left; color: var(--muted); font-weight: 600; }
+    .small { font-size: 12px; color: var(--muted); }
+    .split { display:grid; grid-template-columns: 1fr; gap:12px; }
+    pre { margin:0; white-space: pre-wrap; word-break: break-word; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">T E M U</div>
+    <button class="btn primary" id="btnRun">Run</button>
+    <button class="btn" id="btnStep">Step</button>
+    <div class="field" style="width:120px">
+      <input id="stepN" value="1" class="mono" />
+    </div>
+    <button class="btn danger" id="btnStop">Stop</button>
+    <button class="btn" id="btnReset">Reset</button>
+    <button class="btn" id="btnDump">Dump</button>
+    <button class="btn" id="btnTrace">Trace</button>
+    <div class="spacer"></div>
+    <div class="small mono" id="status">PC=--------</div>
+  </header>
+
+  <main>
+    <section class="panel">
+      <div class="tabs">
+        <button class="tab active" data-tab="editor">Editor</button>
+        <button class="tab" data-tab="console">Console</button>
+        <button class="tab" data-tab="tools">Tools</button>
+      </div>
+      <div class="content">
+        <div id="tab-editor" class="split">
+          <div class="grid2">
+            <div>
+              <div class="small">选择已有源码（loongarch_sc/src/*.S）</div>
+              <select id="sourceSel"></select>
+            </div>
+            <div class="field" style="align-items:flex-end">
+              <button class="btn" id="btnLoadSrc">Load</button>
+              <button class="btn primary" id="btnAssemble">Re-assemble from Editor</button>
+            </div>
+          </div>
+          <div class="grid2">
+            <div class="panel">
+              <h3>上传二进制（inst.bin / data.bin）</h3>
+              <div class="content">
+                <div class="field"><input type="file" id="instFile" /></div>
+                <div class="field" style="margin-top:8px"><input type="file" id="dataFile" /></div>
+                <div class="field" style="margin-top:10px">
+                  <button class="btn" id="btnUpload">Upload</button>
+                  <div class="small" id="uploadMsg"></div>
+                </div>
+              </div>
+            </div>
+            <div></div>
+          </div>
+          <textarea id="editor" spellcheck="false" class="mono"></textarea>
+          <div class="small" id="assembleMsg"></div>
+        </div>
+
+        <div id="tab-console" style="display:none">
+          <div class="field">
+            <button class="btn" id="btnRefreshLog">Refresh</button>
+          </div>
+          <div class="panel" style="margin-top:10px">
+            <div class="content">
+              <pre id="log" class="mono"></pre>
+            </div>
+          </div>
+        </div>
+
+        <div id="tab-tools" style="display:none">
+          <div class="grid2">
+            <div class="panel">
+              <h3>表达式求值（p EXPR）</h3>
+              <div class="content">
+                <div class="field">
+                  <input id="exprIn" placeholder="$a0+4" class="mono" />
+                  <button class="btn" id="btnExpr">Eval</button>
+                </div>
+                <div class="small mono" id="exprOut" style="margin-top:8px"></div>
+              </div>
+            </div>
+            <div class="panel">
+              <h3>内存扫描（x N EXPR）</h3>
+              <div class="content">
+                <div class="field" style="gap:6px">
+                  <input id="memN" value="8" class="mono" style="max-width:80px" />
+                  <input id="memExpr" placeholder="0x80010000" class="mono" />
+                  <button class="btn" id="btnMem">Read</button>
+                </div>
+                <pre id="memOut" class="mono" style="margin-top:8px"></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <aside class="panel">
+      <div class="tabs">
+        <button class="tab active" data-rtab="regs">Registers</button>
+        <button class="tab" data-rtab="watch">Watchpoints</button>
+      </div>
+      <div class="content">
+        <div id="rtab-regs">
+          <table>
+            <thead>
+              <tr><th>Reg</th><th>Value</th></tr>
+            </thead>
+            <tbody id="regs"></tbody>
+          </table>
+        </div>
+        <div id="rtab-watch" style="display:none">
+          <div class="field">
+            <input id="wpExpr" placeholder="EXPR" class="mono" />
+            <button class="btn" id="btnWpAdd">Add</button>
+          </div>
+          <div class="small" id="wpMsg" style="margin-top:6px"></div>
+          <div style="margin-top:10px">
+            <table>
+              <thead><tr><th>NO</th><th>Expr</th><th></th></tr></thead>
+              <tbody id="wps"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+
+    async function api(path, body) {
+      const res = await fetch(path, body ? { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) } : {});
+      const ct = res.headers.get("content-type") || "";
+      if (ct.includes("application/json")) return await res.json();
+      return await res.text();
+    }
+
+    function setStatus(state) {
+      $("status").textContent = `PC=${state.pc}  STATE=${state.temu_state}`;
+      const tbody = $("regs");
+      tbody.innerHTML = "";
+      const names = ["zero","ra","tp","sp","a0","a1","a2","a3","a4","a5","a6","a7","t0","t1","t2","t3","t4","t5","t6","t7","t8","x","fp","s0","s1","s2","s3","s4","s5","s6","s7","s8"];
+      state.gpr.forEach((v, i) => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `<td class="mono">${names[i]} (${String(i).padStart(2,"0")})</td><td class="mono">${v}</td>`;
+        tbody.appendChild(tr);
+      });
+    }
+
+    async function refresh() {
+      const s = await api("/api/state");
+      setStatus(s);
+    }
+
+    async function refreshLog() {
+      const t = await api("/api/log");
+      $("log").textContent = t;
+    }
+
+    async function loadSources() {
+      const s = await api("/api/sources");
+      const sel = $("sourceSel");
+      sel.innerHTML = "";
+      (s.sources || []).forEach(n => {
+        const opt = document.createElement("option");
+        opt.value = n;
+        opt.textContent = n;
+        sel.appendChild(opt);
+      });
+    }
+
+    async function loadSource() {
+      const n = $("sourceSel").value;
+      if (!n) return;
+      const txt = await fetch(`/api/source?name=${encodeURIComponent(n)}`).then(r => r.text());
+      $("editor").value = txt;
+    }
+
+    async function assemble() {
+      const name = prompt("保存为 loongarch_sc/src/<name>.S 的 name：", "webprog");
+      if (!name) return;
+      const r = await api("/api/assemble", { name, source: $("editor").value });
+      $("assembleMsg").textContent = r.success ? "重新汇编成功并已重载。" : ("失败: " + (r.error || ""));
+      await refresh();
+      await refreshLog();
+    }
+
+    async function uploadBins() {
+      const inst = $("instFile").files[0];
+      const data = $("dataFile").files[0];
+      if (!inst || !data) { $("uploadMsg").textContent = "请选择 inst.bin 与 data.bin。"; return; }
+      $("uploadMsg").textContent = "上传中...";
+      const up = async (url, file) => {
+        const res = await fetch(url, { method: "POST", body: await file.arrayBuffer() });
+        return await res.json();
+      };
+      const r1 = await up("/api/upload/inst", inst);
+      const r2 = await up("/api/upload/data", data);
+      $("uploadMsg").textContent = (r1.success && r2.success) ? "上传成功（可点击 Reset 重新加载）。" : "上传失败。";
+    }
+
+    async function evalExpr() {
+      const r = await api("/api/expr", { expr: $("exprIn").value });
+      $("exprOut").textContent = r.success ? `${r.value}` : "Bad expression.";
+    }
+
+    async function memRead() {
+      const n = Number($("memN").value || "1");
+      const r = await api("/api/mem", { n, expr: $("memExpr").value });
+      if (!r.success) { $("memOut").textContent = "Bad expression."; return; }
+      $("memOut").textContent = (r.data || []).map((v, i) => `${(i*4).toString(16).padStart(4,"0")}: ${v}`).join("\n");
+    }
+
+    async function wpAdd() {
+      const r = await api("/api/wp/add", { expr: $("wpExpr").value });
+      $("wpMsg").textContent = r.success ? `已添加 wp ${r.no}，初值 ${r.value}` : "添加失败（表达式错误或无空闲槽）。";
+      await refreshWp();
+    }
+
+    async function wpDel(no) {
+      await api("/api/wp/del", { no });
+      await refreshWp();
+    }
+
+    async function refreshWp() {
+      const s = await api("/api/wp");
+      const tbody = $("wps");
+      tbody.innerHTML = "";
+      (s.watchpoints || []).forEach(wp => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `<td class="mono">${String(wp.no).padStart(2,"0")}</td><td class="mono">${wp.expr}<div class="small mono">${wp.value || ""}</div></td><td><button class="btn danger">Del</button></td>`;
+        tr.querySelector("button").onclick = () => wpDel(wp.no);
+        tbody.appendChild(tr);
+      });
+    }
+
+    $("btnRun").onclick = async () => { await api("/api/run", {}); await refresh(); await refreshLog(); };
+    $("btnStep").onclick = async () => { const n = Number($("stepN").value || "1"); await api("/api/step", { n }); await refresh(); await refreshLog(); };
+    $("btnStop").onclick = async () => { await api("/api/stop", {}); await refresh(); };
+    $("btnReset").onclick = async () => { await api("/api/reset", {}); await refresh(); await refreshLog(); };
+    $("btnTrace").onclick = async () => { window.open("/api/trace", "_blank"); };
+    $("btnDump").onclick = async () => { window.open("/api/dump", "_blank"); };
+    $("btnRefreshLog").onclick = refreshLog;
+    $("btnLoadSrc").onclick = loadSource;
+    $("btnAssemble").onclick = assemble;
+    $("btnUpload").onclick = uploadBins;
+    $("btnExpr").onclick = evalExpr;
+    $("btnMem").onclick = memRead;
+    $("btnWpAdd").onclick = wpAdd;
+
+    document.querySelectorAll(".tab[data-tab]").forEach(btn => {
+      btn.onclick = () => {
+        document.querySelectorAll(".tab[data-tab]").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        ["editor","console","tools"].forEach(t => $("tab-"+t).style.display = (t === btn.dataset.tab) ? "" : "none");
+      };
+    });
+    document.querySelectorAll(".tab[data-rtab]").forEach(btn => {
+      btn.onclick = () => {
+        document.querySelectorAll(".tab[data-rtab]").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        ["regs","watch"].forEach(t => $("rtab-"+t).style.display = (t === btn.dataset.rtab) ? "" : "none");
+      };
+    });
+
+    (async () => {
+      await loadSources();
+      await refresh();
+      await refreshLog();
+      await refreshWp();
+      setInterval(refresh, 1000);
+    })();
+  </script>
+</body>
+</html>

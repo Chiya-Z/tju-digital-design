@@ -41,6 +41,27 @@
   - `pc` / `val`：32-bit 十六进制（不带 `0x`）
   - `reg`：十进制寄存器编号（个位数补 `0` 对齐）
 
+### 需求: Web 图形界面（task4，仿 Venus）
+**模块:** TEMU
+提供本地浏览器可访问的 Web UI，覆盖 Run/Step/Stop/Reset/Dump/Trace、寄存器/内存展示、表达式求值、监视点管理，以及“从编辑器重新汇编”（假设已安装 `loongarch32r-linux-gnusf-*` 工具链）。
+
+#### 场景: 浏览器调试
+- 启动 TEMU 后访问 `http://127.0.0.1:8080/`
+- 在页面中执行 Run/Step/Stop/Reset，查看寄存器与内存变化
+- 在 Editor 页签中选择已有 `.S` 文件或编辑后重新汇编并重载
+
+#### API 约定（本地）
+- `GET /api/state`：获取 `pc/gpr/temu_state`
+- `GET /api/dump`：下载当前状态 JSON
+- `POST /api/run` / `POST /api/step` / `POST /api/stop` / `POST /api/reset`
+- `POST /api/expr`：表达式求值
+- `POST /api/mem`：内存读取
+- `GET /api/wp` / `POST /api/wp/add` / `POST /api/wp/del`
+- `GET /api/log`：读取 `log.txt` 尾部作为“控制台输出”
+- `GET /api/trace`：下载 golden trace
+- `POST /api/assemble`：从编辑器源码重汇编并重载
+- `POST /api/upload/inst` / `POST /api/upload/data`：上传 `inst.bin/data.bin`
+
 ### 需求: task1 指令实现（LoongArch32）
 **模块:** TEMU
 在框架代码基础上补全 LoongArch32 常用指令的译码与执行逻辑（32 位、小端），用于支撑测试程序运行与后续扩展。
@@ -70,3 +91,4 @@
 - [202512261819_temu_task1_instructions](../../history/2025-12/202512261819_temu_task1_instructions/) - 补全 task1 指令集实现与解码表
 - [202512271113_temu_task2_debugger](../../history/2025-12/202512271113_temu_task2_debugger/) - 增加简易调试器命令与表达式/监视点支持
 - [202512271147_temu_task3_golden_trace](../../history/2025-12/202512271147_temu_task3_golden_trace/) - 增加 trace 模块并输出 golden trace
+- [202512271209_temu_web_gui](../../history/2025-12/202512271209_temu_web_gui/) - 增加本地 Web UI 与 HTTP JSON API

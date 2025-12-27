@@ -12,6 +12,7 @@
 | 202512271020 | loongarch_sc_task1_tests | 功能 | ✅已完成 | [2025-12/202512271020_loongarch_sc_task1_tests](2025-12/202512271020_loongarch_sc_task1_tests/) |
 | 202512271113 | temu_task2_debugger | 功能 | ✅已完成 | [2025-12/202512271113_temu_task2_debugger](2025-12/202512271113_temu_task2_debugger/) |
 | 202512271147 | temu_task3_golden_trace | 功能 | ✅已完成 | [2025-12/202512271147_temu_task3_golden_trace](2025-12/202512271147_temu_task3_golden_trace/) |
+| 202512271209 | temu_web_gui | 功能 | ✅已完成 | [2025-12/202512271209_temu_web_gui](2025-12/202512271209_temu_web_gui/) |
 
 ---
 
@@ -23,3 +24,4 @@
 - [202512271020_loongarch_sc_task1_tests](2025-12/202512271020_loongarch_sc_task1_tests/) - 新增 loongarch_sc 的 task1 指令测试程序
 - [202512271113_temu_task2_debugger](2025-12/202512271113_temu_task2_debugger/) - TEMU 增加简易调试器命令与监视点
 - [202512271147_temu_task3_golden_trace](2025-12/202512271147_temu_task3_golden_trace/) - TEMU 增加 golden trace 输出
+- [202512271209_temu_web_gui](2025-12/202512271209_temu_web_gui/) - TEMU 增加本地 Web 图形界面（仿 Venus）

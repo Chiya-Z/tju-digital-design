@@ -98,3 +98,17 @@ void wp_display() {
 	}
 }
 
+int wp_list(WPInfo *out, int max) {
+	if(out == NULL || max <= 0) {
+		return 0;
+	}
+	int n = 0;
+	for(WP *wp = head; wp != NULL && n < max; wp = wp->next) {
+		out[n].NO = wp->NO;
+		out[n].last_val = wp->last_val;
+		strncpy(out[n].expr, wp->expr, sizeof(out[n].expr) - 1);
+		out[n].expr[sizeof(out[n].expr) - 1] = '\0';
+		n++;
+	}
+	return n;
+}
