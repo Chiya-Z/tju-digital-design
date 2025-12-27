@@ -1,8 +1,11 @@
-· CPU：LoongArch32_Lite处理器核心
-
-· SoC：基于LoongArch32_Lite处理器的SoC
-
-· TEMU：LoongArch32指令集仿真器
-
+- CPU：LoongArch32_Lite 处理器核心。
+- SoC：基于 LoongArch32_Lite 处理器的 SoC。
+- TEMU：LoongArch32 指令集仿真器。
+    - 已经在 WSL Ubuntu 20.04 下进行过测试。
+    - 确保已经安装 loongarch32r-linux-gnusf-* 交叉工具链。
+    - 进入 `loongarch-lite/TEMU/loongarch_sc` 目录，执行 `make` 或者 `make USER_PROGRAM=task1` 编译测试程序。
+    - 进入 TEMU 目录，执行 `make run` 运行仿真器。
+    - 按照提示，打开 http://127.0.0.1:8080 页面，使用图形界面控制仿真器。
 - helloagents：历史迭代记录和项目说明。
 - task：关键任务提示词。
+- docs：项目相关文档和资料。

@@ -1,2 +1,2 @@
 # change the tesctcase name
-USER_PROGRAM := task1
+USER_PROGRAM ?= task1
