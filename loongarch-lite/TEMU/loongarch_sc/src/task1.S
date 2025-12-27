@@ -20,7 +20,7 @@
 
 _start:
     /* 数据段基址: 0x80010000 */
-    lu12i.w     s0, 0x80010
+    lu12i.w     s0, -0x7fff0
 
     /* -------- i20-type: lu12i.w / pcaddu12i -------- */
     LI32        t0, 0x12345, 0x678
@@ -69,9 +69,9 @@ _start:
     ASSERT_EQ   t7, t0
 
     /* srai.w：0x80000000 >> 1 算术 => 0xC0000000 */
-    lu12i.w     t1, 0x80000
+    lu12i.w     t1, -0x80000
     srai.w      t2, t1, 0x01
-    lu12i.w     t3, 0xC0000
+    lu12i.w     t3, -0x40000
     ASSERT_EQ   t2, t3
 
     /* -------- i12-type: st.w / ld.w / st.b / ld.b -------- */
