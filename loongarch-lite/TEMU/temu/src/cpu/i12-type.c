@@ -20,11 +20,89 @@ static void decode_ui12_type(uint32_t instr) {
 	op_dest->reg = instr & 0x0000001F;
 }
 
+/* decode I12-type instrucion with signed immediate */
+static void decode_si12_type(uint32_t instr) {
+
+	op_src1->type = OP_TYPE_REG;
+	op_src1->reg = (instr >> 5) & 0x0000001F;
+	op_src1->val = reg_w(op_src1->reg);
+
+	op_src2->type = OP_TYPE_IMM;
+	op_src2->simm = ((int32_t)(instr << 10)) >> 20;
+	op_src2->val = (uint32_t)op_src2->simm;
+
+	op_dest->type = OP_TYPE_REG;
+	op_dest->reg = instr & 0x0000001F;
+}
+
+static inline uint32_t vaddr_to_paddr(uint32_t vaddr) {
+	return vaddr & 0x7FFFFFFF;
+}
+
+make_helper(addi_w) {
+
+	decode_si12_type(instr);
+
+	if(op_dest->reg != 0) {
+		reg_w(op_dest->reg) = op_src1->val + op_src2->val;
+	}
+	sprintf(assembly, "addi.w\t%s,\t%s,\t0x%03x", REG_NAME(op_dest->reg), REG_NAME(op_src1->reg), (instr >> 10) & 0x00000FFF);
+}
+
 
 make_helper(ori) {
 
 	decode_ui12_type(instr);
-	reg_w(op_dest->reg) = op_src1->val | op_src2->val;
+	if(op_dest->reg != 0) {
+		reg_w(op_dest->reg) = op_src1->val | op_src2->val;
+	}
 	sprintf(assembly, "ori\t%s,\t%s,\t0x%03x", REG_NAME(op_dest->reg), REG_NAME(op_src1->reg), op_src2->imm);
 }
 
+make_helper(andi) {
+
+	decode_ui12_type(instr);
+	if(op_dest->reg != 0) {
+		reg_w(op_dest->reg) = op_src1->val & op_src2->val;
+	}
+	sprintf(assembly, "andi\t%s,\t%s,\t0x%03x", REG_NAME(op_dest->reg), REG_NAME(op_src1->reg), op_src2->imm);
+}
+
+make_helper(st_w) {
+
+	decode_si12_type(instr);
+	uint32_t addr = vaddr_to_paddr(op_src1->val + op_src2->val);
+	mem_write(addr, 4, reg_w(op_dest->reg));
+	sprintf(assembly, "st.w\t%s,\t%s,\t0x%03x", REG_NAME(op_dest->reg), REG_NAME(op_src1->reg), (instr >> 10) & 0x00000FFF);
+}
+
+make_helper(ld_w) {
+
+	decode_si12_type(instr);
+	uint32_t addr = vaddr_to_paddr(op_src1->val + op_src2->val);
+	uint32_t data = mem_read(addr, 4);
+	if(op_dest->reg != 0) {
+		reg_w(op_dest->reg) = data;
+	}
+	sprintf(assembly, "ld.w\t%s,\t%s,\t0x%03x", REG_NAME(op_dest->reg), REG_NAME(op_src1->reg), (instr >> 10) & 0x00000FFF);
+}
+
+make_helper(st_b) {
+
+	decode_si12_type(instr);
+	uint32_t addr = vaddr_to_paddr(op_src1->val + op_src2->val);
+	mem_write(addr, 1, reg_w(op_dest->reg) & 0x000000FF);
+	sprintf(assembly, "st.b\t%s,\t%s,\t0x%03x", REG_NAME(op_dest->reg), REG_NAME(op_src1->reg), (instr >> 10) & 0x00000FFF);
+}
+
+make_helper(ld_b) {
+
+	decode_si12_type(instr);
+	uint32_t addr = vaddr_to_paddr(op_src1->val + op_src2->val);
+	uint32_t data = mem_read(addr, 1);
+	int8_t b = (int8_t)(data & 0xFF);
+	if(op_dest->reg != 0) {
+		reg_w(op_dest->reg) = (uint32_t)((int32_t)b);
+	}
+	sprintf(assembly, "ld.b\t%s,\t%s,\t0x%03x", REG_NAME(op_dest->reg), REG_NAME(op_src1->reg), (instr >> 10) & 0x00000FFF);
+}

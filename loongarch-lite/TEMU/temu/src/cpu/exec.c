@@ -3,6 +3,7 @@
 
 typedef void (*op_fun)(uint32_t);
 static make_helper(_2byte_esc);
+static make_helper(load_store);
 
 Operands ops_decoded;
 uint32_t instr;
@@ -66,9 +67,9 @@ make_group(_group1_3R,
 	inv, inv, inv, inv,  /* 0x14  */
 	inv, inv, inv, inv,  /* 0x18  */
 	inv, inv, inv, inv,  /* 0x1c  */
-	inv, inv, inv, inv,  /* 0x20  */
-        inv, inv, inv, inv,  /* 0x24  */
-        inv, inv, or, inv,   /* 0x28  */
+	add_w, inv, inv, inv,  /* 0x20  */
+        slt, inv, inv, inv,  /* 0x24  */
+        inv, inv, or, xor,   /* 0x28  */
         inv, inv, inv, inv,  /* 0x2c  */
         inv, inv, inv, inv,  /* 0x30  */
         inv, inv, inv, inv,  /* 0x34  */
@@ -76,7 +77,7 @@ make_group(_group1_3R,
         inv, inv, inv, inv,  /* 0x3c  */
 	inv, inv, inv, inv,  /* 0x40  */
         inv, inv, inv, inv,  /* 0x44  */
-        inv, inv, inv, inv,  /* 0x48  */
+        inv, srai_w, inv, inv,  /* 0x48  */
         inv, inv, inv, inv,  /* 0x4c  */
         inv, inv, inv, inv,  /* 0x50  */
         inv, inv, inv, inv,  /* 0x54  */
@@ -96,12 +97,12 @@ make_group(_group1_3R,
 
 op_fun opcode_table [64] = {
 /* 0x00 */	_2byte_esc, inv, inv, inv,
-/* 0x04 */	inv, lu12i_w, inv, inv,
-/* 0x08 */	inv, inv, inv, inv,
+/* 0x04 */	inv, lu12i_w, inv, pcaddu12i,
+/* 0x08 */	inv, inv, load_store, inv,
 /* 0x0c */	inv, inv, inv, inv,
 /* 0x10 */	inv, inv, inv, inv,
-/* 0x14 */	inv, inv, inv, inv,
-/* 0x18 */	inv, inv, inv, inv,
+/* 0x14 */	inv, inv, beq, bne,
+/* 0x18 */	inv, bge, inv, inv,
 /* 0x1c */	inv, inv, inv, inv,
 /* 0x20 */	temu_trap, inv, inv, inv,
 /* 0x24 */	inv, inv, inv, inv,
@@ -116,8 +117,8 @@ op_fun opcode_table [64] = {
 op_fun _2byte_opcode_table [16] = {
 /* 0x00 */	_group1_3R, inv, inv, inv, 
 /* 0x04 */	inv, inv, inv, inv, 
-/* 0x08 */	inv, inv, inv, inv, 
-/* 0x0c */	inv, inv, ori, inv
+/* 0x08 */	inv, inv, addi_w, inv, 
+/* 0x0c */	inv, andi, ori, inv
 };
 
 
@@ -130,4 +131,16 @@ make_helper(exec) {
 static make_helper(_2byte_esc) {
 	ops_decoded.opcode2 = ((instr << 6) & 0xF0000000) >> 28;
 	_2byte_opcode_table[ops_decoded.opcode2](pc); 
+}
+
+static make_helper(load_store) {
+	static op_fun load_store_table[16] = {
+		/* 0x0 */ ld_b, inv, ld_w, inv,
+		/* 0x4 */ st_b, inv, st_w, inv,
+		/* 0x8 */ inv, inv, inv, inv,
+		/* 0xc */ inv, inv, inv, inv
+	};
+
+	uint32_t opcode2 = (instr >> 22) & 0x0000000F;
+	load_store_table[opcode2](pc);
 }

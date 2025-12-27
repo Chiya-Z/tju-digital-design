@@ -6,7 +6,7 @@
 ## 模块概述
 - **职责:** 汇编测试程序组织、链接脚本、镜像转换生成
 - **状态:** 🚧开发中
-- **最后更新:** 2025-12-25
+- **最后更新:** 2025-12-27
 
 ## 规范
 
@@ -18,6 +18,14 @@
 - `cd TEMU/loongarch_sc && make`
 - 确认 `TEMU/` 下生成 `*.bin` 文件
 
+### 需求: task1 指令测试程序
+**模块:** loongarch_sc
+新增覆盖 task1 指令集的汇编测试程序，并保持固定地址映射（`.text` 位于 `0x80000000`，`.data` 位于 `0x80010000`），便于与 TEMU 的“虚拟地址最高位清 0 得到物理地址”映射规则一致。
+
+#### 场景: 构建 task1 测试程序
+- `cd TEMU/loongarch_sc && make USER_PROGRAM=task1`
+- 成功结束应触发 `HIT_GOOD_TRAP`；失败会触发未实现指令（便于在反汇编中定位）
+
 ## API接口
 不适用（通过文件产物与仿真器/硬件对接）。
 
@@ -28,5 +36,4 @@
 - TEMU：`TEMU/Makefile` 会包含 `loongarch_sc/src/Makefile.testcase`
 
 ## 变更历史
-- （暂无）
-
+- [202512271020_loongarch_sc_task1_tests](../../history/2025-12/202512271020_loongarch_sc_task1_tests/) - 新增 task1 指令测试程序与构建可配置项
